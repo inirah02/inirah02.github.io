@@ -1,0 +1,48 @@
+{{ define "main" }}
+<section class="hero">
+    <div class="container">
+        <h1>{{ .Site.Params.author }}</h1>
+        <p class="tagline">{{ .Site.Params.description }}</p>
+    </div>
+</section>
+
+<section class="quick-links">
+    <div class="container">
+        <div class="grid">
+            {{ range .Site.Menus.main }}
+            {{ if ne .Name "Home" }}
+            <a href="{{ .URL }}" class="card">
+                <h3>{{ .Name }}</h3>
+            </a>
+            {{ end }}
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<section class="recent-content">
+    <div class="container">
+        <h2>Latest Updates</h2>
+        
+        <h3>Recent News</h3>
+        <ul>
+            {{ range first 3 (where .Site.RegularPages "Section" "news") }}
+            <li>
+                <span class="date">{{ .Date.Format "Jan 2, 2006" }}</span>
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </li>
+            {{ end }}
+        </ul>
+
+        <h3>Recent Technical Posts</h3>
+        <ul>
+            {{ range first 3 (where .Site.RegularPages "Params.blogtype" "technical") }}
+            <li>
+                <span class="date">{{ .Date.Format "Jan 2, 2006" }}</span>
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+</section>
+{{ end }}
