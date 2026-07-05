@@ -64,16 +64,16 @@ If step 3 gives a “file exists” prompt, hit `A` for “All”.
 ## What's new in V2.1
 
 ### Content added
-- **CMU Xu Lab** collaborative researcher role (Jul 2026 to Present) in Experience and vision board.
+- **CMU** collaborative researcher role (Jul 2026 to Present) in Experience and vision board.
 - **ISSTA 2026 paper** (“The Discreet Charm of the Bugeoisie”) in Research; 23.6% acceptance rate.
 - **ABCT 2026 poster** and **ACM womENcourage 2026 poster** in Research.
 - **MCP Developers Summit Mumbai + Bengaluru keynotes** (eBPF × MCP) in Talks.
 - **Bangalore Data Lakehouse Meetup** (Cloudera × e6data × OLake) in Talks and Projects.
 - **UIUC bullets** updated to reflect ISSTA co-authorship + APR + fairness testing.
-- **IBM Software Developer bullets** updated with double-band promotion, wxdctl CLI, 90% cost cut, Cloud VPC cleanup, FedRAMP CVE remediation, Top 50 recognition.
+- **IBM Software Developer bullets** updated with wxdctl CLI, 90% cost cut, Cloud VPC cleanup, FedRAMP CVE remediation, and agentic govtech initiatives.
 - **Community** expanded with AIES 2026 PC, ICLR MemAgents reviewer, GopherCon reviewer, PEARC reviewer, LWKD Editor & Writer.
 - **Mentoring** split into its own section with WHPC, Sitara Akka, TA Linear Algebra, TA GenAI, Women Who Code, GirlsCodeIt, Right to Write.
-- **Achievements** updated with double-band promotion, Top 50 IBM, LinkedIn Top Voice 2025.
+- **Achievements** updated with double-band promotion, IBM Sovereign Core Catalog-athon Top 50 ideas, and LinkedIn Top Voice 2025.
 
 ### Structural additions
 - **News / Latest section** (section 01) between vision board and About: reverse-chronological milestone list.
@@ -159,13 +159,13 @@ Tiles use a single string `image` (not an array):
 ```js
 {
   label: "02 / New",
-  title: "CMU Xu Lab\nMedical VLMs",
+  title: "CMU\nMedical VLMs",
   variant: "clay",
   size: "md",
   caption: "Collaborative researcher · interpretability",
   link: "#work",
-  image: "images/home/cmu-lab.jpg",
-  alt: "CMU Xu Lab research materials"
+  image: "images/home/cmu-research.jpg",
+  alt: "CMU medical vision-language model research materials"
 }
 ```
 Missing image = clean color-block fallback with a decorative SVG.

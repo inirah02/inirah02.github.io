@@ -33,7 +33,7 @@ const NEWS = [
   {
     date: "Jul 2026",
     category: "Research",
-    title: "Started collaborative research with the CMU Xu Lab on medical vision-language models",
+    title: "Started collaborative research with CMU on medical vision-language models",
     desc: "Early-stage work on interpretability, reasoning, and trustworthy biomedical foundation models. Current focus: literature synthesis on mechanistic interpretability for SAM and MedSAM-style medical foundation models, probing methods, domain shift, and clinically meaningful reasoning."
   },
   {
@@ -77,14 +77,14 @@ const NEWS = [
 /* ---------- VISION BOARD TILES ---------- */
 const BOARD_TILES = [
   // Row 1
-  { label: "01 / Build", title: "Software Developer\nat IBM Data & AI", variant: "ink",   size: "lg", caption: "watsonx.data · cloud-native infra · promoted with a double-band advancement", link: "#work" },
-  { label: "02 / New",   title: "CMU Xu Lab\nMedical VLMs", variant: "clay", size: "md", caption: "Collaborative researcher · interpretability & trustworthy biomedical AI", link: "#work" },
+  { label: "01 / Build", title: "Software Developer\nat IBM Data & AI", variant: "ink",   size: "lg", caption: "watsonx.data infrastructure · Kubernetes · agentic govtech", link: "#work" },
+  { label: "02 / New",   title: "CMU\nMedical VLMs", variant: "clay", size: "md", caption: "Collaborative researcher · interpretability & trustworthy biomedical AI", link: "#work" },
   { label: "03 / Stage", title: "KubeCon EU 2026\nAmsterdam", variant: "paper2", size: "sm", caption: "AI Meets Kubernetes · Cloud Native AI Day", link: "#talks" },
-  { label: "04 / Note",  title: "swiftieintech",   variant: "gold", size: "xs", caption: "1,400+ learners", link: "#writing" },
+  { label: "04 / Note",  title: "swiftieintech",   variant: "gold", size: "xs", caption: "2,000+ readers globally", link: "#writing" },
 
   // Row 2
   { label: "05 / Paper", title: "ISSTA 2026\nAccepted", variant: "paper3", size: "md", caption: "The Discreet Charm of the Bugeoisie · 23.6% acceptance", link: "#research" },
-  { label: "06 / Health", title: "Clinical AI\nacross four labs", variant: "sage", size: "tall", caption: "Niramai · IIT Hyderabad · Dartmouth · CMU", link: "#research" },
+  { label: "06 / Health", title: "Clinical AI\nacross research tracks", variant: "sage", size: "tall", caption: "Niramai · IIT Hyderabad · Dartmouth · CMU", link: "#research" },
   { label: "07 / Keynote", title: "MCP Developers Summit\nMumbai & Bengaluru", variant: "ink", size: "sm", caption: "eBPF · MCP · trust boundaries", link: "#talks" },
   { label: "08 / Lead",  title: "HSP\nHead", variant: "tile3", size: "sm", caption: "Largest FOSS community at PES", link: "#community" },
 
@@ -112,7 +112,7 @@ const EXPERIENCES = [
   {
     date: "Jul 2026 to Present",
     role: "Collaborative Researcher",
-    org: "Carnegie Mellon University · Xu Lab",
+    org: "Carnegie Mellon University",
     location: "Remote",
     bullets: [
       "Collaborating on early-stage research in medical vision-language models, with emphasis on interpretability, reasoning, and trustworthy biomedical foundation models.",
@@ -127,13 +127,13 @@ const EXPERIENCES = [
     org: "IBM · Data & AI (watsonx.data)",
     location: "Bengaluru · On-site",
     bullets: [
-      "Promoted through a double-band advancement in recognition of sustained technical ownership, business impact, cross-team leadership, and cloud-native infrastructure contributions.",
       "Built cloud-native infrastructure and developer tooling for IBM watsonx.data across Kubernetes, Go, ArgoCD/GitOps, OpenSearch, FedRAMP compliance, and AI infrastructure operations.",
+      "Leading pan lab agentic govtech initiatives at IBM, connecting sovereign AI, policy-aware infrastructure, and practical internal tooling for regulated environments.",
       "Architected and delivered wxdctl, a production-grade Golang CLI for Kubernetes resource operations across ROKS and Azure clusters, reducing developer friction for Business Unit cloud operations.",
       "Drove infrastructure cost optimization by reducing File and Block Storage expenditure by 90% ($820 to $70/month) through forensic Persistent Volume analysis, owner validation, and safe formation cleanup.",
       "Led infrastructure-as-code cleanup for the Cloud VPC initiative, introducing hierarchical value resolution and eliminating 60-70% redundant configuration while maintaining backward compatibility across ArgoCD health checks.",
       "Contributed to security-critical initiatives: FedRAMP baseline CVE remediation, DAST/UI scans for OpenSearch tech preview, hardened packaging for HSCP components.",
-      "Resolved 100+ cross-team infrastructure blockers; selected among the top 50 high-performing contributors for leadership visibility and strategic technical roundtables.",
+      "Resolved 100+ cross-team infrastructure blockers across IBM watsonx.data infrastructure and developer workflows.",
       "Selected to lead the Speaking & Authoring Working Group under the ISL-wide Core-X initiative.",
       "Contributor to the IBM Agentic AI patent project."
     ],
@@ -154,7 +154,7 @@ const EXPERIENCES = [
   {
     date: "Jun 2025 to Present",
     role: "Software Engineering Researcher (UIUC+ Program)",
-    org: "University of Illinois Urbana-Champaign · MIR Group · PI: Prof. Darko Marinov",
+    org: "University of Illinois Urbana-Champaign",
     location: "Remote",
     bullets: [
       "Selected to the UIUC+ Summer Undergraduate Research in Software Engineering cohort: ranked among the top 15 out of 1,300+ applicants through multi-stage review.",
@@ -167,7 +167,7 @@ const EXPERIENCES = [
   {
     date: "Mar 2026 to Present",
     role: "Biomedical AI Researcher",
-    org: "Geisel School of Medicine at Dartmouth",
+    org: "Dartmouth",
     location: "Remote",
     bullets: [
       "Working on personalized digital health models for schizophrenia using passive smartphone sensing and ecological momentary assessment data.",
@@ -179,7 +179,7 @@ const EXPERIENCES = [
   {
     date: "Jan 2026 to Present",
     role: "Volunteer Research Associate",
-    org: "Georgia Institute of Technology · Center for the Study of Systems Biology",
+    org: "Georgia Institute of Technology",
     location: "Remote",
     bullets: [
       "Applying ML/AI methods to complex scientific and biological problems.",
@@ -444,7 +444,7 @@ const PROJECTS = [
   {
     cat: "Writing / Knowledge",
     name: "swiftieintech",
-    desc: "Newsletter using Taylor Swift's discography as a thematic frame to make AI/data concepts accessible. Global community of 1,400+ learners across platforms.",
+    desc: "Newsletter using Taylor Swift's discography as a thematic frame to make AI/data concepts accessible. Global community of 2,000+ readers across platforms.",
     tags: ["Newsletter", "AI", "Mentorship"]
   },
   {
@@ -531,7 +531,7 @@ const COMMUNITY = [
 const MENTORING = [
   { role: "Mentor", org: "Women in High Performance Computing (WHPC)", date: "Jan 2026 to Present", desc: "Mentor early-career and aspiring professionals in the HPC ecosystem through structured guidance on technical development, research direction, confidence-building, and career navigation." },
   { role: "Fellow / Mentor", org: "Sitara Akka", date: "2025 to Present", desc: "Part of a volunteer mentoring collective that has supported 300 students over 8 months through academic, career, and personal-development guidance, including support for students navigating difficult circumstances." },
-  { role: "Founder / Writer", org: "swiftieintech", date: "2024 to Present", desc: "Write technical and career-focused AI content for a global learner community of 1,400+ subscribers. Translates emerging AI, cloud-native, and research ideas into accessible learning resources." },
+  { role: "Founder / Writer", org: "swiftieintech", date: "2024 to Present", desc: "Write technical and career-focused AI content for a global reader community of 2,000+ subscribers. Translates emerging AI, cloud-native, and research ideas into accessible learning resources." },
   { role: "Teaching Assistant", org: "Generative AI & Its Applications, PES University", date: "Dec 2024 to Jun 2025", desc: "Supported course delivery, student mentoring, and hands-on learning around generative AI systems, applied AI tools, and responsible AI workflows." },
   { role: "Teaching Assistant", org: "Linear Algebra, PES University", date: "Prior semester", desc: "Supported undergraduate instruction, student doubt-clearing, and mathematical foundations for machine learning, data science, and AI coursework." },
   { role: "1:1 Mentor", org: "Open DMs / Project Reviews", date: "Ongoing", desc: "30-min 1:1s and project reviews with students from states across India. Knowledge-sharing as access-building." },
@@ -543,7 +543,7 @@ const MENTORING = [
 /* ---------- ACHIEVEMENTS ---------- */
 const ACHIEVEMENTS = [
   { cat: "IBM",          title: "Double-band Promotion at IBM", desc: "Recognized for exceptional technical ownership, business impact, and cross-functional leadership in cloud-native infrastructure." },
-  { cat: "IBM",          title: "Top 50 High-Performing Contributor, IBM", desc: "Selected for leadership visibility, strategic technical initiatives, and senior leadership roundtables." },
+  { cat: "IBM",          title: "Top 50 Ideas · IBM Sovereign Core Catalog-athon", desc: "Our team's two ideas reached the Top 50 in a cross-lab initiative spanning seven cities: a Policy-as-Code Governance Engine for Sovereign Kubernetes using Kyverno/OPA-style enforcement, and a Sovereign Document Intelligence Hub using Paperless-ngx, Apache Tika, PostgreSQL, MinIO, Redis, and OCR for searchable, auditable, in-boundary document workflows." },
   { cat: "IBM",          title: "IBM ISL Hackathon · Most Innovative Solution", desc: "Product Synergy Week 2026. Special mention from VP Vishal Chahal." },
   { cat: "Speaking",     title: "KubeCon + CloudNativeCon EU 2026", desc: "Speaker · Cloud Native AI Day · Amsterdam." },
   { cat: "Speaking",     title: "KubeCon + CloudNativeCon India 2025", desc: "Keynote. Only intern accepted; youngest speaker. CNCF-sponsored." },
@@ -558,7 +558,7 @@ const ACHIEVEMENTS = [
   { cat: "Scholarship",  title: "O'Reilly DEIJ Scholar", desc: "Unlimited access to the O'Reilly learning platform." },
   { cat: "Scholarship",  title: "AnitaB.org India Advancing Inclusion", desc: "Scholarship to attend Grace Hopper Celebration India 2024 in person." },
   { cat: "Scholarship",  title: "RISE MICCAI Summer School 2025", desc: "Diffusion models, graph learning, uncertainty quantification for medical image computing." },
-  { cat: "Research",     title: "UIUC+ Summer Undergraduate Research", desc: "Top 15 of 1,300+ applicants. Software engineering under Prof. Darko Marinov." },
+  { cat: "Research",     title: "UIUC+ Summer Undergraduate Research", desc: "Top 15 of 1,300+ applicants. Software engineering research at UIUC." },
   { cat: "Research",     title: "ACM India Summer School (IIT Hyderabad)", desc: "1 of 40 students nationwide. Algorithmic Techniques in Computational Biology." },
   { cat: "Research",     title: "ISSTA 2026 Paper Acceptance", desc: "The Discreet Charm of the Bugeoisie. 23.6% acceptance rate." },
   { cat: "Research",     title: "ICAART 2025 Paper Acceptance", desc: "First international student-researcher conference paper. Music × stress × XAI." },
