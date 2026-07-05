@@ -3,11 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Harini Anand — Software Developer, Researcher, Writer</title>
-<meta name="description" content="Harini Anand — Software Developer at IBM (Data & AI / watsonx.data). Software engineering researcher at UIUC. Writing, talks, and research at the intersection of AI infrastructure, data systems, and clinical AI." />
+<title>Harini Anand · Software Developer, Researcher, Writer</title>
+<meta name="description" content="Harini Anand: Software Developer at IBM Data & AI (watsonx.data). Researcher across UIUC, Georgia Tech, Dartmouth, and CMU. Writer, speaker, and community builder across Kubernetes, MCP, data systems, and biomedical AI." />
 <meta property="og:title" content="Harini Anand" />
-<meta property="og:description" content="Developer · Researcher · Writer working across AI infrastructure, data systems, and community-led learning." />
+<meta property="og:description" content="Software Developer at IBM Data & AI. Researcher across UIUC, Georgia Tech, Dartmouth, and CMU. Speaker and technical writer working across AI infrastructure, biomedical AI, and cloud-native systems." />
 <meta property="og:type" content="website" />
+<meta property="og:url" content="https://inirah02.github.io/" />
+<meta property="og:image" content="images/misc/og.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -28,6 +31,7 @@
       <a href="#talks">Talks</a>
       <a href="#writing">Writing</a>
       <a href="#community">Community</a>
+      <a href="#mentoring">Mentoring</a>
       <a href="#cv">CV</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -52,7 +56,7 @@
       <span class="hero__line">research &amp; words.</span>
     </h1>
     <div class="hero__lede">
-      <p>Software Developer at <strong>IBM</strong> — Data &amp; AI division, working on <em>watsonx.data</em>. Software Engineering Researcher at <strong>UIUC</strong> under Prof. Darko Marinov. Research Associate at <strong>Georgia Tech</strong>. Writer of <em>swiftieintech</em>. Speaker at KubeCon. Mostly: someone who learns out loud.</p>
+      <p>Software Developer in <strong>IBM Data &amp; AI</strong>, working on <em>watsonx.data</em> infrastructure, cloud-native systems, and AI developer tooling. Researcher across <strong>UIUC</strong>, <strong>Georgia Tech</strong>, <strong>Dartmouth</strong>, and <strong>CMU</strong>, at the intersection of software engineering research, computational biology, biomedical AI, and trustworthy medical vision-language models. Beyond research and engineering, I build technical communities through talks, open source, mentoring, and public scholarship across AI, Kubernetes, MCP, and data systems.</p>
       <div class="hero__cta">
         <a href="#work" class="btn btn--primary">View work</a>
         <a href="#writing" class="btn">Read writing</a>
@@ -63,10 +67,11 @@
     <aside class="hero__nowhere">
       <span class="eyebrow">Currently</span>
       <ul>
-        <li><span class="dot"></span>Building cloud-native + AI infra at IBM watsonx.data</li>
-        <li><span class="dot"></span>Researching fairness testing &amp; APR at UIUC</li>
-        <li><span class="dot"></span>Writing <em>swiftieintech</em> · 1,400+ learners</li>
-        <li><span class="dot"></span>Speaking at KubeCon EU 2026, Amsterdam</li>
+        <li><span class="dot"></span>Collaborative Researcher, CMU Xu Lab (medical VLMs)</li>
+        <li><span class="dot"></span>Building watsonx.data infra at IBM · post double-band promo</li>
+        <li><span class="dot"></span>ISSTA 2026 paper accepted with UIUC</li>
+        <li><span class="dot"></span>Editor &amp; Writer, kubernetes-sigs/lwkd</li>
+        <li><span class="dot"></span>swiftieintech · 1,400+ learners</li>
       </ul>
     </aside>
   </div>
@@ -77,31 +82,41 @@
   <div class="board__header">
     <span class="section-num">00</span>
     <h2>The board.</h2>
-    <p class="section-sub">A curated archive — what I build, write, research &amp; return to.</p>
+    <p class="section-sub">A curated archive of what I build, write, research, and return to.</p>
   </div>
 
   <div class="board__grid" id="boardGrid">
-    <!-- tiles populated by script.js from data/board.js -->
+    <!-- populated by script.js -->
   </div>
+</section>
+
+<!-- ============ NEWS / LATEST ============ -->
+<section class="news" id="news">
+  <div class="section-head">
+    <span class="section-num">01</span>
+    <h2>Latest.</h2>
+    <p class="section-sub">Recent milestones, in reverse chronological order.</p>
+  </div>
+  <ol class="news__list" id="newsList"></ol>
 </section>
 
 <!-- ============ ABOUT ============ -->
 <section class="about" id="about">
   <div class="section-head">
-    <span class="section-num">01</span>
+    <span class="section-num">02</span>
     <h2>About.</h2>
   </div>
   <div class="about__grid">
     <div class="about__col">
-      <p class="about__lead">I'm a software developer, researcher, and technical writer working across AI infrastructure, data systems, and clinical AI.</p>
-      <p>By day, I'm at <strong>IBM</strong> in the Data &amp; AI division, contributing to <em>watsonx.data</em> — a hybrid open data lakehouse purpose-built for AI workloads. I've worked on cloud cost optimization, internal Kubernetes tooling in Go, FedRAMP compliance, the OpenSearch acquisition tech preview, and a patent project on agentic AI. I also lead the Speaking &amp; Authoring Working Group under IBM ISL's Core-X initiative.</p>
-      <p>In parallel, I'm a remote Undergraduate Researcher in Software Engineering at <strong>UIUC</strong> under Prof. Darko Marinov (MIR Group), working on fairness testing in ML systems and automated program repair. I'm also a Volunteer Research Associate at <strong>Georgia Tech</strong>'s Center for the Study of Systems Biology and a Biomedical AI Researcher at <strong>Geisel School of Medicine at Dartmouth</strong>, working on personalized digital health models for schizophrenia.</p>
+      <p class="about__lead">I'm a software developer, researcher, and technical writer working across AI infrastructure, data systems, and biomedical AI.</p>
+      <p>By day, I'm at <strong>IBM</strong> in the Data &amp; AI division, contributing to <em>watsonx.data</em>, a hybrid open data lakehouse purpose-built for AI workloads. I've built <em>wxdctl</em> (a production Golang CLI for Kubernetes CRD operations across ROKS/Azure), driven a 90% cloud storage cost reduction, led IaC cleanup for the Cloud VPC initiative, contributed to FedRAMP CVE remediation, and worked on the OpenSearch acquisition tech preview and an Agentic AI patent project. Recently promoted through a double-band advancement and selected among the Top 50 high-performing contributors. I also lead the Speaking &amp; Authoring Working Group under IBM ISL's Core-X initiative.</p>
+      <p>In parallel, I'm a remote Software Engineering Researcher at <strong>UIUC</strong> under Prof. Darko Marinov (MIR Group), where our team's ISSTA 2026 paper on reproducibility and evidentiary rigor in bug reporting was recently accepted (23.6% acceptance). I'm a Volunteer Research Associate at <strong>Georgia Tech</strong>'s Center for the Study of Systems Biology, a Biomedical AI Researcher at <strong>Geisel School of Medicine at Dartmouth</strong> (schizophrenia symptom prediction from passive sensing), and a Collaborative Researcher at <strong>CMU</strong>'s Xu Lab (medical vision-language models, interpretability, trustworthy biomedical foundation models).</p>
     </div>
     <div class="about__col">
-      <p>Earlier, I interned at <strong>Niramai Health Analytix</strong> on breast-cancer screening tools, did research at <strong>IIT Hyderabad</strong> on gene regulatory networks via PySCENIC, and built <em>Project ROOTS</em> — a cognitive-games app for delaying dementia onset that won the Cisco ThingQbator national cohort and reached 350+ users.</p>
-      <p>I led <strong>HSP</strong>, the largest FOSS community at PES University, started <em>Project Expo</em>, and was a core member of GDSC and ACM-W chapters. I've taught Generative AI as a TA, mentored through Sitara Akka, and given talks at KubeCon, IndiaFOSS, Women Who Go, Apache Beam @ Google, WHPC Purdue, and others.</p>
-      <p>I write at the intersection of technology and accessibility — <em>swiftieintech</em>, my newsletter that uses Taylor Swift's discography as a thematic frame for technical concepts, and <em>Breakdown the BMC: AI Innovator's Playbook</em>, a biweekly series with Aishwarya Srinivasan analyzing AI startups. I was named a LinkedIn Top Voice in Data Science.</p>
-      <p class="about__sig">— H</p>
+      <p>Earlier, I interned at <strong>Niramai Health Analytix</strong> on breast-cancer screening tools, did research at <strong>IIT Hyderabad</strong> on gene regulatory networks via PySCENIC, and built <em>Project ROOTS</em>, a cognitive-games app for delaying dementia onset that won the Cisco ThingQbator national cohort, reached 350+ users, and whose extension was accepted as a poster at ACM womENcourage 2026.</p>
+      <p>I led <strong>Hackerspace (HSP)</strong>, the largest FOSS community at PES University, started <em>Project Expo</em>, and was a core member of GDSC and ACM-W chapters. I've taught Linear Algebra and Generative AI as a TA, mentor through <em>Sitara Akka</em> and Women in HPC, review for <em>AIES 2026</em>, <em>ICLR MemAgents</em>, <em>GopherCon US</em>, and <em>PEARC 2026</em>, and serve as Editor &amp; Writer for <em>kubernetes-sigs/lwkd</em>.</p>
+      <p>I write at the intersection of technology and accessibility: <em>swiftieintech</em>, my newsletter that uses Taylor Swift's discography as a thematic frame for technical concepts (1,400+ learners), and <em>Breakdown the BMC: AI Innovator's Playbook</em>, a biweekly series with Aishwarya Srinivasan analyzing AI startups. Named a LinkedIn Top Voice in Data Science, 2025.</p>
+      <p class="about__sig">H.</p>
     </div>
   </div>
 
@@ -121,9 +136,9 @@
 <!-- ============ EXPERIENCE ============ -->
 <section class="exp" id="work">
   <div class="section-head">
-    <span class="section-num">02</span>
+    <span class="section-num">03</span>
     <h2>Experience.</h2>
-    <p class="section-sub">Verified roles from CV &amp; LinkedIn.</p>
+    <p class="section-sub">Verified roles from CV and public sources.</p>
   </div>
   <ol class="timeline" id="timeline"></ol>
 </section>
@@ -131,7 +146,7 @@
 <!-- ============ RESEARCH ============ -->
 <section class="research" id="research">
   <div class="section-head">
-    <span class="section-num">03</span>
+    <span class="section-num">04</span>
     <h2>Research &amp; Publications.</h2>
     <p class="section-sub">Software engineering · Clinical AI · Interpretable ML · Systems biology.</p>
   </div>
@@ -141,7 +156,7 @@
 <!-- ============ PROJECTS ============ -->
 <section class="projects" id="projects">
   <div class="section-head">
-    <span class="section-num">04</span>
+    <span class="section-num">05</span>
     <h2>Selected projects.</h2>
   </div>
   <div class="projects__grid" id="projectsGrid"></div>
@@ -150,13 +165,13 @@
 <!-- ============ TALKS ============ -->
 <section class="talks" id="talks">
   <div class="section-head">
-    <span class="section-num">05</span>
-    <h2>Talks &amp; sessions.</h2>
+    <span class="section-num">06</span>
+    <h2>Invited keynotes, talks &amp; presentations.</h2>
     <p class="section-sub">Conferences · workshops · paper readings · panels.</p>
   </div>
   <div class="talks__filter" id="talksFilter">
     <button data-cat="all" class="chip chip--active">All</button>
-    <button data-cat="conference" class="chip">Conferences</button>
+    <button data-cat="conference" class="chip">Conferences &amp; keynotes</button>
     <button data-cat="workshop" class="chip">Workshops</button>
     <button data-cat="paper" class="chip">Paper readings</button>
     <button data-cat="panel" class="chip">Panels &amp; moderation</button>
@@ -168,7 +183,7 @@
 <!-- ============ WRITING ============ -->
 <section class="writing" id="writing">
   <div class="section-head">
-    <span class="section-num">06</span>
+    <span class="section-num">07</span>
     <h2>Writing.</h2>
     <p class="section-sub">Newsletters, series, and public notes.</p>
   </div>
@@ -177,7 +192,7 @@
     <article class="series__card">
       <span class="eyebrow">Newsletter · Ongoing</span>
       <h3>swiftieintech</h3>
-      <p>A weekly technology newsletter using Taylor Swift's discography as a thematic frame to make AI &amp; data concepts accessible. Now a global community of <strong>1,400+ learners</strong> across platforms.</p>
+      <p>Weekly technology newsletter using Taylor Swift's discography as a thematic frame to make AI and data concepts accessible. Global community of <strong>1,400+ learners</strong>.</p>
       <div class="series__tags">
         <span>AI</span><span>Data</span><span>ML</span><span>Mentorship</span>
       </div>
@@ -187,7 +202,7 @@
     <article class="series__card">
       <span class="eyebrow">Biweekly series · with Aishwarya Srinivasan</span>
       <h3>Breakdown the BMC: AI Innovator's Playbook</h3>
-      <p>Coffee-chat interviews with founders, deep dives on niche AI startups, and analyses of business model canvases — published via Illuminate AI.</p>
+      <p>Coffee-chat interviews with founders, deep dives on niche AI startups, and analyses of business model canvases. Published via Illuminate AI.</p>
       <div class="series__tags">
         <span>Startups</span><span>AI Infra</span><span>Content Strategy</span>
       </div>
@@ -195,9 +210,9 @@
     </article>
 
     <article class="series__card">
-      <span class="eyebrow">Recognition</span>
-      <h3>LinkedIn Top Voice — Data Science</h3>
-      <p>Recognized for collaborative articles &amp; insights on data science, mentorship, and the journey from undergraduate to practitioner.</p>
+      <span class="eyebrow">Recognition · 2025</span>
+      <h3>LinkedIn Top Voice · Data Science</h3>
+      <p>Recognized for collaborative articles and insights on data science, mentorship, and the journey from undergraduate to practitioner.</p>
       <div class="series__tags">
         <span>Data Science</span><span>Mentorship</span>
       </div>
@@ -208,20 +223,30 @@
   <ul class="writing__list" id="writingList"></ul>
 </section>
 
-<!-- ============ COMMUNITY & MENTORING ============ -->
+<!-- ============ COMMUNITY ============ -->
 <section class="community" id="community">
   <div class="section-head">
-    <span class="section-num">07</span>
-    <h2>Community &amp; mentoring.</h2>
-    <p class="section-sub">Knowledge-sharing as infrastructure.</p>
+    <span class="section-num">08</span>
+    <h2>Community, service &amp; open source.</h2>
+    <p class="section-sub">Program committees, editorial boards, communities led.</p>
   </div>
   <div class="community__grid" id="communityGrid"></div>
+</section>
+
+<!-- ============ MENTORING ============ -->
+<section class="community" id="mentoring">
+  <div class="section-head">
+    <span class="section-num">09</span>
+    <h2>Mentoring &amp; teaching.</h2>
+    <p class="section-sub">Access-building through 1:1s, coursework, and outreach.</p>
+  </div>
+  <div class="community__grid" id="mentoringGrid"></div>
 </section>
 
 <!-- ============ ACHIEVEMENTS ============ -->
 <section class="achievements" id="achievements">
   <div class="section-head">
-    <span class="section-num">08</span>
+    <span class="section-num">10</span>
     <h2>Selected recognition.</h2>
   </div>
   <div class="ach__grid" id="achGrid"></div>
@@ -230,12 +255,12 @@
 <!-- ============ CV ============ -->
 <section class="cv" id="cv">
   <div class="section-head">
-    <span class="section-num">09</span>
+    <span class="section-num">11</span>
     <h2>Curriculum vitae.</h2>
   </div>
   <div class="cv__panel">
     <div class="cv__copy">
-      <p>The full record — education, experience, publications, awards.</p>
+      <p>The full record: education, experience, publications, awards.</p>
       <div class="cv__actions">
         <a class="btn btn--primary" href="cv/Harini_Anand_Resume.pdf" download>Download PDF</a>
         <a class="btn" href="cv/Harini_Anand_Resume.pdf" target="_blank" rel="noopener">Open in tab</a>
@@ -256,7 +281,7 @@
 <!-- ============ CONTACT ============ -->
 <section class="contact" id="contact">
   <div class="section-head">
-    <span class="section-num">10</span>
+    <span class="section-num">12</span>
     <h2>Reach out.</h2>
     <p class="section-sub">Mentorship, talks, collaborations, coffee chats.</p>
   </div>
@@ -288,7 +313,7 @@
   <div class="foot__inner">
     <div>
       <p class="foot__name">Harini Anand</p>
-      <p class="foot__sub">Built and maintained by hand. Last upgraded May 2026.</p>
+      <p class="foot__sub">Built and maintained by hand. Last upgraded July 2026.</p>
     </div>
     <div class="foot__links">
       <a href="#top">Back to top ↑</a>

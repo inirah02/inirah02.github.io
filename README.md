@@ -1,189 +1,214 @@
-# Harini Anand — Personal Site
+# Harini Anand · Personal Site (V2.1)
 
-A static, content-data-driven personal website. Editorial archive aesthetic. No build step. Deploys directly to GitHub Pages.
+Static, content-data-driven personal website. Editorial archive aesthetic. No build step. Deploys directly to GitHub Pages.
+
+Every text change lives in `data/content.js`. No HTML editing needed for routine updates.
 
 ---
 
-## What's here
+## What's in this repo
 
 ```
 .
-├── index.html           # entire page structure
-├── styles.css           # all styling (cream/ink/clay editorial theme)
+├── index.html           # page structure
+├── styles.css           # editorial cream/ink/clay theme + carousel + news
 ├── script.js            # rendering + interactions (vanilla JS, no deps)
 ├── data/
-│   └── content.js       # ALL content — edit this to update the site
+│   └── content.js       # ALL content lives here
 ├── cv/
 │   └── Harini_Anand_Resume.pdf
 └── images/
-    ├── home/            # vision-board tile images go here
-    ├── about/
-    ├── projects/
-    ├── research/
-    ├── talks/
-    ├── writing/
-    ├── community/
-    └── mentoring/
+    ├── home/    about/    projects/   research/
+    ├── talks/   writing/  community/  mentoring/  misc/
 ```
 
 ---
 
-## Deploying to https://inirah02.github.io/
+## Deploy to https://inirah02.github.io/
 
-This is a **user site** — it must live in the repo `inirah02/inirah02.github.io` and serve from the root.
+You said you can't edit files locally. Here is the exact terminal recipe. Copy-paste line by line, or paste the whole block.
 
-### 1. Replace the existing repo content
 ```bash
-# from the inirah02.github.io repo root
-git rm -rf .                                # remove the old V1 site
-cp -R /path/to/this/folder/* .              # drop in everything from this folder
+# 1. Go to the repo folder
+cd ~/inirah02.github.io
+
+# 2. Wipe the tracked V1 files
+git rm -rf .
+
+# 3. Unzip the new site over the repo root
+#    (assumes the zip is in ~/Downloads)
+unzip -o ~/Downloads/harini-anand-website-v2-1.zip -d .
+
+# 4. Some unzippers create a nested folder called `website/`.
+#    If they do, flatten it:
+if [ -d website ]; then
+  mv website/* website/.[!.]* . 2>/dev/null || true
+  rmdir website
+fi
+
+# 5. Commit and push
 git add .
-git commit -m "Upgrade to V2: editorial archive site"
-git push origin main                        # or master, whichever your repo uses
+git commit -m "V2.1: add CMU + ISSTA + MCP summits + news + mentoring split"
+git push origin main       # or `master` if that's your default branch
+
+# 6. GitHub Pages rebuilds within ~30 seconds.
+#    Open https://inirah02.github.io/ to verify.
 ```
 
-GitHub Pages will rebuild automatically. The URL stays `https://inirah02.github.io/`.
+**No GitHub CLI needed. No node, npm, or build tooling. Just unzip, commit, push.**
 
-### 2. Verify
-- Open `https://inirah02.github.io/` and check every section.
-- Click each nav link — they're anchor links to in-page sections.
-- Try the CV section: the PDF should preview inline; **Download PDF** opens it in a new tab.
+If step 3 gives a “file exists” prompt, hit `A` for “All”.
+
+---
+
+## What's new in V2.1
+
+### Content added
+- **CMU Xu Lab** collaborative researcher role (Jul 2026 to Present) in Experience and vision board.
+- **ISSTA 2026 paper** (“The Discreet Charm of the Bugeoisie”) in Research; 23.6% acceptance rate.
+- **ABCT 2026 poster** and **ACM womENcourage 2026 poster** in Research.
+- **MCP Developers Summit Mumbai + Bengaluru keynotes** (eBPF × MCP) in Talks.
+- **Bangalore Data Lakehouse Meetup** (Cloudera × e6data × OLake) in Talks and Projects.
+- **UIUC bullets** updated to reflect ISSTA co-authorship + APR + fairness testing.
+- **IBM Software Developer bullets** updated with double-band promotion, wxdctl CLI, 90% cost cut, Cloud VPC cleanup, FedRAMP CVE remediation, Top 50 recognition.
+- **Community** expanded with AIES 2026 PC, ICLR MemAgents reviewer, GopherCon reviewer, PEARC reviewer, LWKD Editor & Writer.
+- **Mentoring** split into its own section with WHPC, Sitara Akka, TA Linear Algebra, TA GenAI, Women Who Code, GirlsCodeIt, Right to Write.
+- **Achievements** updated with double-band promotion, Top 50 IBM, LinkedIn Top Voice 2025.
+
+### Structural additions
+- **News / Latest section** (section 01) between vision board and About: reverse-chronological milestone list.
+- **Mentoring section** (section 09) split from Community.
+- **Multi-image carousel** support: any card in Projects / Talks / Research / Writing / Community / Mentoring can now accept an `images: []` array. One image = static. Multiple = auto-rotating carousel with dots, arrows, hover-to-pause, and reduced-motion respect.
+
+### Style + typography
+- Homepage bio rewritten (Option A from your brief).
+- All em dashes and en dashes removed sitewide (typographical requirement).
+- Section numbers renumbered `00` to `12`.
+- New OG meta + Twitter card meta tags (uses `images/misc/og.jpg`, add whenever ready).
 
 ---
 
 ## Editing content
 
-**All content lives in `data/content.js`.** No HTML editing needed for routine updates.
+All content lives in `data/content.js`. Arrays available:
 
-The file exports these arrays:
+| Array | Section |
+|---|---|
+| `NEWS` | Latest (news feed) |
+| `BOARD_TILES` | Vision board tiles |
+| `EXPERIENCES` | Experience timeline |
+| `RESEARCH` | Research & Publications |
+| `PROJECTS` | Selected projects |
+| `TALKS` | Talks (with filter) |
+| `WRITING` | Writing archive |
+| `COMMUNITY` | Community, service, open source |
+| `MENTORING` | Mentoring & teaching |
+| `ACHIEVEMENTS` | Selected recognition |
 
-| Array | Purpose | Section |
-|---|---|---|
-| `BOARD_TILES` | Vision-board tiles on landing page | The board |
-| `EXPERIENCES` | Roles, internships, fellowships | Experience |
-| `RESEARCH` | Publications & papers | Research & Publications |
-| `PROJECTS` | Engineering / research projects | Selected projects |
-| `TALKS` | Conference talks, workshops, panels | Talks & sessions |
-| `WRITING` | Posts, features, newsletter pieces | Writing archive |
-| `COMMUNITY` | Community + mentoring roles | Community & mentoring |
-| `ACHIEVEMENTS` | Scholarships, fellowships, recognition | Selected recognition |
-
-### Add a new talk
-Open `data/content.js`, find the `TALKS` array, add an item:
-
+### Add a news item
 ```js
 {
-  cat: "conference",                     // conference | workshop | paper | panel | guest
-  date: "Apr 2026",
+  date: "Aug 2026",
+  category: "Publication",
+  title: "Your headline",
+  desc: "One or two sentences of context."
+}
+```
+Add to the top of the `NEWS` array (reverse chronological).
+
+### Add a talk
+```js
+{
+  cat: "conference",   // conference | workshop | paper | panel | guest
+  date: "Sep 2026",
   title: "Your talk title",
-  event: "Event / host name",
-  location: "City · attendees",
+  event: "Event name · host",
+  location: "City",
   desc: "Short description.",
-  link: "https://event.url"              // optional
+  link: "https://event.url"   // optional
 }
 ```
 
-### Add a new experience entry
+### Add images to a card
+Add an `images` array to any item in `PROJECTS`, `TALKS`, `RESEARCH`, `WRITING`, `COMMUNITY`, `MENTORING`, or `EXPERIENCES`:
+
 ```js
 {
-  date: "Month YYYY — Month YYYY",
-  role: "Your role",
-  org: "Org · sub-team",
-  location: "City · On-site/Remote",
-  bullets: [
-    "Bullet 1.",
-    "Bullet 2."
-  ],
-  tags: ["tag1", "tag2"]
+  cat: "AI Infrastructure · IBM",
+  name: "wxdctl · Golang CLI",
+  desc: "...",
+  tags: [...],
+  images: [
+    { src: "images/projects/wxdctl/screenshot-1.png",
+      alt: "wxdctl help output",
+      caption: "Command discovery view" },
+    { src: "images/projects/wxdctl/screenshot-2.png",
+      alt: "CRD listing",
+      caption: "ROKS cluster view" }
+  ]
 }
 ```
 
-### Update the CV
-Replace `cv/Harini_Anand_Resume.pdf` with a newer file using the same filename. No code change needed.
+Behavior:
+- 0 images → nothing rendered above the card
+- 1 image → static, no controls
+- Multiple images → auto-rotating carousel, 5-second interval, pause on hover/focus, dot indicators, prev/next arrows, honors reduced-motion
 
----
-
-## Adding images
-
-Every section that has tiles, cards, or research items can take images. The system is designed so the site looks polished even with no images — placeholders match the theme.
-
-### Vision board tiles
-In `data/content.js`, add an `image` key (and optional `alt`) to any tile:
-
+### Add a vision-board tile image
+Tiles use a single string `image` (not an array):
 ```js
 {
-  label: "01 / Build",
-  title: "Software Developer\nat IBM",
-  variant: "ink",
-  size: "lg",
-  caption: "Data & AI · watsonx.data",
+  label: "02 / New",
+  title: "CMU Xu Lab\nMedical VLMs",
+  variant: "clay",
+  size: "md",
+  caption: "Collaborative researcher · interpretability",
   link: "#work",
-  image: "/images/home/ibm-desk.jpg",   // ← add this
-  alt: "Workspace at the IBM Bengaluru office"
+  image: "images/home/cmu-lab.jpg",
+  alt: "CMU Xu Lab research materials"
 }
 ```
+Missing image = clean color-block fallback with a decorative SVG.
 
-If the file is missing or fails to load, the tile cleanly falls back to its colored variant + decorative SVG.
-
-### Where to place images
-| Section | Folder | Example |
-|---|---|---|
-| Vision board | `/images/home/` | `kubecon-stage.jpg` |
-| About visuals | `/images/about/` | `portrait.jpg` |
-| Projects | `/images/projects/` | `project-roots/cover.jpg` |
-| Research | `/images/research/` | `icaart-paper-poster.jpg` |
-| Talks | `/images/talks/` | `kubecon-eu-2026/cover.jpg` |
-| Writing | `/images/writing/` | `breakdown-bmc-helfie.png` |
-| Community | `/images/community/` | `hsp-project-expo.jpg` |
-| Mentoring | `/images/mentoring/` | `sitara-akka.jpg` |
-
-Use lowercase, hyphenated filenames. Keep files under 500KB where possible — large hero images can go up to ~1.2MB but optimize first (e.g. `cwebp` or Squoosh).
-
-### One image vs many images
-The current carousel-as-static-image pattern is built into the tile system (single image per tile). If you want multi-image carousels for project/talk/writing detail pages later, the `script.js` `placeholderSVG()` function and tile rendering can be extended — the data model already has space (just change `image:` → `images: [{src, alt, caption}, ...]`). Tell me when you're ready and I'll wire it up.
+### Replace the CV
+Drop your new PDF in `cv/` with the filename `Harini_Anand_Resume.pdf`. Nothing else to change.
 
 ---
 
-## What was used as source
+## Image placement guide
 
-Everything on this site is grounded in:
-1. **Resume** (`Harini_Anand___Resume__4_.pdf`) — IBM, UIUC, Niramai, IIT Hyderabad, publications, achievements.
-2. **LinkedIn data export** (`Linkedn_Data.pdf`) — bio, posts about ACM, KubeCon, Project Roots, ICAART, I2CT, Niramai, Hasgeek, IndiaFOSS, Women Who Go, Apache Beam, etc.
-3. **Existing repo intent** (per planning doc).
+| Section | Folder |
+|---|---|
+| Vision board tiles | `images/home/` |
+| About visuals | `images/about/` |
+| Project cards | `images/projects/<slug>/` |
+| Research cards | `images/research/<slug>/` |
+| Talks | `images/talks/<slug>/` |
+| Writing | `images/writing/<slug>/` |
+| Community | `images/community/` |
+| Mentoring | `images/mentoring/` |
+| OpenGraph / social share | `images/misc/og.jpg` (1200×630) |
 
----
-
-## What was *not* included (needs verification)
-
-These were in the planning doc but I couldn't confidently source them from the materials provided:
-
-- **Substack / Hashnode / Dev.to direct links** — only LinkedIn-newsletter and inferred Substack posts are listed under writing. If you have direct URLs for individual `Breakdown the BMC` issues on Substack, paste them into the `WRITING` array's `url` fields.
-- **Google Scholar profile URL** — I used `https://scholar.google.com/citations?user=lD0KK0EAAAAJ` from the resume header link "Google Scholar". If your actual user ID differs, update the link in `index.html` (Contact section).
-- **Specific KubeCon talk video URLs / YouTube embeds** — only the Cummins talk YouTube link from the LinkedIn data is included. Add others as they go live.
-- **Twitter/X handle** — not present in source material; intentionally omitted (you said "do not guess usernames").
-- **Photo / portrait** — none included. Drop one in `/images/about/portrait.jpg` and reference it from the about section if you want.
+Use lowercase, hyphenated filenames. Keep files under 500KB where possible.
 
 ---
 
-## TODO list (things you may want to add later)
+## What was intentionally NOT included
 
-- [ ] Drop personal images into `/images/home/` and add `image:` keys in `BOARD_TILES`.
-- [ ] If you want a richer carousel (multi-image per project/talk/post), tell me and I'll extend `script.js`.
-- [ ] Add direct Substack/Dev.to links to `WRITING` items.
-- [ ] If you want a separate Mentoring page split out from Community, that's a 5-minute change.
-- [ ] Add OpenGraph image at `/images/og.jpg` (1200×630) and update `<meta property="og:image">` in `index.html`.
-
----
-
-## Browser support
-Tested mentally for: Chrome, Safari, Firefox, Edge (latest). No IE. No build step. No Node dependency. Pure HTML/CSS/vanilla JS.
-
-## Performance notes
-- Google Fonts (Fraunces + Instrument Sans + JetBrains Mono) are the only external assets.
-- No JS framework, no bundler. Initial JS payload < 15KB.
-- All renders happen on `DOMContentLoaded` with no flicker.
-- `prefers-reduced-motion` honored throughout.
+Per your anti-hallucination rule, these were skipped:
+- **Substack / Dev.to / Hashnode direct article URLs** : the `WRITING` array has `url: ""` placeholders. Fill in as you have them.
+- **Twitter/X handle** : not in source material.
+- **Portrait photo** : placeholder folders are ready.
+- **Individual KubeCon / MCP summit talk video URLs** : only your Cummins College YouTube link is embedded so far. Add others as they publish.
+- **OpenGraph preview image** : meta tag is present but points to `images/misc/og.jpg`. Add the file whenever you're ready.
 
 ---
 
-If anything breaks: the site degrades gracefully — even with JS disabled, the hero, nav, CV section, and all section headings still render from static HTML.
+## Browser + performance notes
+
+- Pure HTML/CSS/vanilla JS. No build, no npm, no framework.
+- Google Fonts (Fraunces + Instrument Sans + JetBrains Mono) is the only external asset.
+- Initial JS payload under 20KB (was 15KB in V2 before carousel).
+- `prefers-reduced-motion` honored throughout (carousel does not auto-rotate).
+- Full keyboard nav; carousel arrows and dots have aria-labels.
+- Site degrades gracefully with JS disabled: hero, nav, CV panel, and all section headings still render.

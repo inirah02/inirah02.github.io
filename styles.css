@@ -1,6 +1,6 @@
 /* =====================================================
-   Harini Anand — personal site
-   Editorial archive aesthetic. Cream paper · ink · clay.
+   Harini Anand · personal site
+   Editorial archive aesthetic. Cream paper, ink, clay.
    ===================================================== */
 
 :root {
@@ -404,7 +404,7 @@ em  { font-family: var(--display); font-style: italic; font-weight: 400; }
 .tile--paper3  { background: var(--paper-3); }
 .tile--tile3   { background: var(--tile-3); }
 
-/* tile sizes — desktop bento */
+/* tile sizes, desktop bento */
 .tile--xs { grid-column: span 3; grid-row: span 1; }
 .tile--sm { grid-column: span 3; grid-row: span 2; }
 .tile--md { grid-column: span 4; grid-row: span 2; }
@@ -584,9 +584,10 @@ em  { font-family: var(--display); font-style: italic; font-weight: 400; }
   padding-left: 1rem;
 }
 .timeline__bullets li::before {
-  content: '–';
+  content: '·';
   position: absolute; left: 0;
-  color: var(--ink-4);
+  color: var(--clay);
+  font-weight: 600;
 }
 .timeline__tags {
   display: flex; flex-wrap: wrap; gap: .35rem;
@@ -1098,3 +1099,195 @@ em  { font-family: var(--display); font-style: italic; font-weight: 400; }
 
 /* selection */
 ::selection { background: var(--clay); color: var(--paper); }
+
+/* =====================================================
+   NEWS / LATEST
+   ===================================================== */
+.news {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: clamp(3rem, 6vw, 5rem) var(--pad);
+}
+.news__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--rule);
+}
+.news__item {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 1rem 2rem;
+  padding: 1.35rem 0;
+  border-bottom: 1px solid var(--rule);
+  align-items: baseline;
+  transition: background .25s ease;
+}
+.news__item:hover { background: rgba(183,85,58,0.03); }
+.news__date {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .12em;
+  color: var(--ink-3);
+  text-transform: uppercase;
+  padding-top: 4px;
+}
+.news__cat {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--clay);
+  display: inline-block;
+  padding: 3px 9px;
+  border: 1px solid var(--clay);
+  border-radius: 999px;
+  margin-bottom: .5rem;
+}
+.news__body h3 {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  line-height: 1.25;
+  margin: 0 0 .35rem;
+  letter-spacing: -0.005em;
+}
+.news__body p {
+  margin: 0;
+  font-size: 14.5px;
+  color: var(--ink-2);
+  max-width: 70ch;
+}
+@media (max-width: 720px) {
+  .news__item {
+    grid-template-columns: 1fr;
+    gap: .35rem;
+  }
+}
+
+/* =====================================================
+   CARD MEDIA (single image) + CAROUSEL (multi-image)
+   ===================================================== */
+.card-media,
+.carousel {
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--paper-3);
+  margin: 0 0 .85rem 0;
+  border: 1px solid var(--rule);
+}
+.card-media img,
+.carousel .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.card-media figcaption,
+.carousel .slide figcaption {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: .5rem .75rem;
+  background: linear-gradient(0deg, rgba(0,0,0,.55), transparent);
+  color: var(--paper);
+  font-size: 12.5px;
+  font-family: var(--body);
+}
+.card-media--broken img { display: none; }
+.card-media--broken::after {
+  content: 'Image coming soon';
+  position: absolute; inset: 0;
+  display: grid; place-items: center;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+/* Carousel track */
+.carousel__track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.carousel .slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity .5s ease;
+  pointer-events: none;
+}
+.carousel .slide.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.carousel__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.4);
+  background: rgba(0,0,0,.35);
+  color: var(--paper);
+  font-family: var(--display);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background .2s ease, transform .2s ease;
+  z-index: 2;
+}
+.carousel__nav:hover {
+  background: rgba(0,0,0,.6);
+  transform: translateY(-50%) scale(1.06);
+}
+.carousel__nav--prev { left: 10px; }
+.carousel__nav--next { right: 10px; }
+
+.carousel__dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+}
+.carousel__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 0;
+  background: rgba(255,255,255,.5);
+  cursor: pointer;
+  padding: 0;
+  transition: background .2s ease, transform .2s ease;
+}
+.carousel__dot.is-active {
+  background: var(--paper);
+  transform: scale(1.25);
+}
+.carousel__dot:focus-visible {
+  outline: 2px solid var(--clay);
+  outline-offset: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .carousel .slide { transition: none; }
+}
+
+/* Paper author line */
+.paper__authors {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  color: var(--ink-3);
+  line-height: 1.5;
+  margin: 0;
+}
