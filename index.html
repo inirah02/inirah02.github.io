@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="styles.css?v=20260705-2" />
 </head>
 <body>
 
@@ -60,6 +60,7 @@
       <div class="hero__cta">
         <a href="#work" class="btn btn--primary">View work</a>
         <a href="#writing" class="btn">Read writing</a>
+        <a href="https://harinianand.substack.com" class="btn" target="_blank" rel="noopener">Substack</a>
         <a href="#cv" class="btn">CV</a>
         <a href="#contact" class="btn btn--ghost">Contact</a>
       </div>
@@ -189,6 +190,19 @@
   </div>
 
   <div class="series">
+    <article class="series__card series__card--live">
+      <span class="eyebrow">Live updates</span>
+      <h3>Freshest notes live on LinkedIn and Substack</h3>
+      <p>For the newest talks, project updates, research milestones, and short-form technical notes, LinkedIn is the most current source. Longer essays and systems writing live on Substack.</p>
+      <div class="series__tags">
+        <span>LinkedIn</span><span>Substack</span><span>Newsletter</span>
+      </div>
+      <div class="series__actions">
+        <a class="libutton" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7271142545974272000" target="_blank" rel="noopener">Subscribe on LinkedIn</a>
+        <a class="btn btn--small" href="https://harinianand.substack.com" target="_blank" rel="noopener">Read Substack</a>
+      </div>
+    </article>
+
     <article class="series__card">
       <span class="eyebrow">Newsletter · Ongoing</span>
       <h3>swiftieintech</h3>
@@ -196,17 +210,20 @@
       <div class="series__tags">
         <span>AI</span><span>Data</span><span>ML</span><span>Mentorship</span>
       </div>
-      <a class="link-arrow" href="https://www.linkedin.com/newsletters/swiftieintech-7268168042189156353/" target="_blank" rel="noopener">Read on LinkedIn →</a>
+      <div class="series__actions">
+        <a class="link-arrow" href="https://www.linkedin.com/newsletters/swiftieintech-7268168042189156353/" target="_blank" rel="noopener">Read on LinkedIn →</a>
+        <a class="libutton" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7271142545974272000" target="_blank" rel="noopener">Subscribe on LinkedIn</a>
+      </div>
     </article>
 
     <article class="series__card">
-      <span class="eyebrow">Biweekly series · with Aishwarya Srinivasan</span>
-      <h3>Breakdown the BMC: AI Innovator's Playbook</h3>
-      <p>Coffee-chat interviews with founders, deep dives on niche AI startups, and analyses of business model canvases. Published via Illuminate AI.</p>
+      <span class="eyebrow">Substack · Latest verified RSS item</span>
+      <h3>Your Observability Stack Is 40% Overhead Before It Serves a Single Request</h3>
+      <p>Long-form systems writing on eBPF, MCP, Kubernetes observability, and agentic infrastructure. Latest item verified from Harini's Substack RSS feed on July 5, 2026.</p>
       <div class="series__tags">
-        <span>Startups</span><span>AI Infra</span><span>Content Strategy</span>
+        <span>eBPF</span><span>MCP</span><span>Kubernetes</span><span>Observability</span>
       </div>
-      <a class="link-arrow" href="#writing-archive">View features ↓</a>
+      <a class="link-arrow" href="https://harinianand.substack.com/p/your-observability-stack-is-40-overhead" target="_blank" rel="noopener">Read on Substack →</a>
     </article>
 
     <article class="series__card">
@@ -216,6 +233,7 @@
       <div class="series__tags">
         <span>Data Science</span><span>Mentorship</span>
       </div>
+      <a class="link-arrow" href="https://www.linkedin.com/in/harini-anand-2002/" target="_blank" rel="noopener">See latest on LinkedIn →</a>
     </article>
   </div>
 
@@ -301,6 +319,16 @@
       <span class="contact__val">@inirah02</span>
       <span class="link-arrow">Follow →</span>
     </a>
+    <a class="contact__card" href="https://harinianand.substack.com" target="_blank" rel="noopener">
+      <span class="eyebrow">Substack</span>
+      <span class="contact__val">Harini's Substack</span>
+      <span class="link-arrow">Read →</span>
+    </a>
+    <a class="contact__card" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7271142545974272000" target="_blank" rel="noopener">
+      <span class="eyebrow">Newsletter</span>
+      <span class="contact__val">Subscribe on LinkedIn</span>
+      <span class="link-arrow">Subscribe →</span>
+    </a>
     <a class="contact__card" href="https://scholar.google.com/citations?user=lD0KK0EAAAAJ" target="_blank" rel="noopener">
       <span class="eyebrow">Google Scholar</span>
       <span class="contact__val">Publications</span>
@@ -323,7 +351,7 @@
 
 </main>
 
-<script src="data/content.js"></script>
-<script src="script.js"></script>
+<script src="data/content.js?v=20260705-2"></script>
+<script src="script.js?v=20260705-2"></script>
 </body>
 </html>

@@ -135,6 +135,7 @@
           <span class="news__cat">${n.category}</span>
           <h3>${n.title}</h3>
           <p>${n.desc}</p>
+          ${n.link ? `<a class="link-arrow news__link" href="${n.link}" target="_blank" rel="noopener">Open source →</a>` : ''}
         </div>
       </li>
     `).join('');

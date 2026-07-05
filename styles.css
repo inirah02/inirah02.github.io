@@ -1278,6 +1278,56 @@ em  { font-family: var(--display); font-style: italic; font-weight: 400; }
   outline-offset: 2px;
 }
 
+.series__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .75rem;
+  margin-top: 1rem;
+}
+
+.series__card--live {
+  border-color: rgba(10,102,194,.28);
+}
+
+.libutton {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 14px;
+  text-align: center;
+  outline: none;
+  text-decoration: none !important;
+  color: #ffffff !important;
+  min-width: 200px;
+  min-height: 32px;
+  border-radius: 16px;
+  background-color: #0A66C2;
+  font-family: "SF Pro Text", Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  box-shadow: 0 10px 22px rgba(10,102,194,.16);
+  transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease;
+}
+
+.libutton:hover {
+  background-color: #004182;
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(10,102,194,.22);
+}
+
+.btn--small {
+  padding: .55rem .85rem;
+  font-size: 13px;
+}
+
+.news__link {
+  display: inline-flex;
+  margin-top: .6rem;
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .carousel .slide { transition: none; }

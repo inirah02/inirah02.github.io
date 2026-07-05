@@ -17,6 +17,20 @@
 /* ---------- NEWS / LATEST ---------- */
 const NEWS = [
   {
+    date: "Jun 2026",
+    category: "Substack",
+    title: "Published: Your Observability Stack Is 40% Overhead Before It Serves a Single Request",
+    desc: "Latest verified Substack RSS item as of July 5, 2026. Long-form systems essay on eBPF, MCP, Kubernetes observability, and replacing sidecar sprawl with kernel-level truth.",
+    link: "https://harinianand.substack.com/p/your-observability-stack-is-40-overhead"
+  },
+  {
+    date: "Ongoing",
+    category: "Newsletter",
+    title: "swiftieintech on LinkedIn",
+    desc: "Primary source for regularly updated short-form posts, newsletter issues, technical notes, and community updates. Subscribe directly through LinkedIn.",
+    link: "https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7271142545974272000"
+  },
+  {
     date: "Jul 2026",
     category: "Research",
     title: "Started collaborative research with the CMU Xu Lab on medical vision-language models",
