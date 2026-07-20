@@ -1,29 +1,29 @@
 /* =====================================================
    Harini Anand · personal site
-   Editorial archive aesthetic. Cream paper, ink, clay.
+   Editorial archive aesthetic. Porcelain, graphite, steel.
    ===================================================== */
 
 :root {
   /* palette */
-  --paper:        #F4EFE6;
-  --paper-2:      #ECE5D6;
-  --paper-3:      #E3DAC5;
-  --ink:          #1A1A1A;
-  --ink-2:        #2E2E2E;
-  --ink-3:        #555048;
-  --ink-4:        #8A8378;
-  --line:         #1A1A1A;
-  --rule:         #C4B89F;
-  --clay:         #B7553A;
-  --clay-soft:    #D88A6E;
-  --sage:         #6E7F5C;
-  --gold:         #B58A3A;
-  --tile-1:       #E9DFC7;
-  --tile-2:       #DCD0B2;
-  --tile-3:       #CABB95;
-  --tile-4:       #2E2E2E;
-  --tile-5:       #B7553A;
-  --tile-6:       #6E7F5C;
+  --paper:        #F7F8FA;
+  --paper-2:      #EEF2F5;
+  --paper-3:      #E2E8EE;
+  --ink:          #151A1F;
+  --ink-2:        #27313A;
+  --ink-3:        #5B6670;
+  --ink-4:        #8A949E;
+  --line:         #151A1F;
+  --rule:         #C9D2DA;
+  --clay:         #2F6F8F;
+  --clay-soft:    #7EA6B8;
+  --sage:         #43695F;
+  --gold:         #A47A2D;
+  --tile-1:       #EDF1F4;
+  --tile-2:       #E1E8EE;
+  --tile-3:       #D2DCE4;
+  --tile-4:       #27313A;
+  --tile-5:       #2F6F8F;
+  --tile-6:       #43695F;
 
   /* type */
   --display: "Fraunces", "Iowan Old Style", "Cambria", Georgia, serif;
@@ -51,8 +51,8 @@ body {
   text-rendering: optimizeLegibility;
   /* faint paper grain */
   background-image:
-    radial-gradient(1200px 600px at 10% -10%, rgba(183,85,58,0.05), transparent 60%),
-    radial-gradient(900px 500px at 110% 30%, rgba(110,127,92,0.04), transparent 60%),
+    radial-gradient(1200px 600px at 10% -10%, rgba(47,111,143,0.055), transparent 60%),
+    radial-gradient(900px 500px at 110% 30%, rgba(67,105,95,0.045), transparent 60%),
     repeating-linear-gradient(0deg, rgba(0,0,0,0.012) 0 1px, transparent 1px 3px);
 }
 
@@ -136,7 +136,7 @@ em  { font-family: var(--display); font-style: italic; font-weight: 400; }
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(244, 239, 230, 0.78);
+  background: rgba(247, 248, 250, 0.82);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--rule);
@@ -550,7 +550,7 @@ em  { font-family: var(--display); font-style: italic; font-weight: 400; }
   align-items: start;
   transition: background .25s ease;
 }
-.timeline__item:hover { background: rgba(183,85,58,0.03); }
+.timeline__item:hover { background: rgba(47,111,143,0.045); }
 .timeline__date {
   font-family: var(--mono);
   font-size: 12px;
@@ -770,7 +770,7 @@ em  { font-family: var(--display); font-style: italic; font-weight: 400; }
   align-items: baseline;
   transition: background .25s ease;
 }
-.talk:hover { background: rgba(183,85,58,0.03); }
+.talk:hover { background: rgba(47,111,143,0.045); }
 .talk__date {
   font-family: var(--mono);
   font-size: 12px;
@@ -960,12 +960,12 @@ em  { font-family: var(--display); font-style: italic; font-weight: 400; }
 }
 .ach {
   padding: 1.25rem;
-  border: 1px solid rgba(244,239,230,0.18);
+  border: 1px solid rgba(247,248,250,0.18);
   border-radius: var(--radius);
-  background: rgba(244,239,230,0.03);
+  background: rgba(247,248,250,0.035);
   transition: background .25s ease;
 }
-.ach:hover { background: rgba(244,239,230,0.06); }
+.ach:hover { background: rgba(247,248,250,0.07); }
 .ach__cat {
   font-family: var(--mono);
   font-size: 10.5px;
@@ -982,7 +982,7 @@ em  { font-family: var(--display); font-style: italic; font-weight: 400; }
   line-height: 1.25;
   margin: 0 0 .35rem;
 }
-.ach p { margin: 0; font-size: 13.5px; color: rgba(244,239,230,0.7); }
+.ach p { margin: 0; font-size: 13.5px; color: rgba(247,248,250,0.72); }
 
 /* =====================================================
    CV
@@ -1123,7 +1123,7 @@ em  { font-family: var(--display); font-style: italic; font-weight: 400; }
   align-items: baseline;
   transition: background .25s ease;
 }
-.news__item:hover { background: rgba(183,85,58,0.03); }
+.news__item:hover { background: rgba(47,111,143,0.045); }
 .news__date {
   font-family: var(--mono);
   font-size: 12px;
