@@ -77,34 +77,34 @@ const NEWS = [
 /* ---------- VISION BOARD TILES ---------- */
 const BOARD_TILES = [
   // Row 1
-  { label: "01 / Build", title: "Software Developer\nat IBM Data & AI", variant: "ink",   size: "lg", caption: "watsonx.data infrastructure · Kubernetes · agentic govtech", link: "#work" },
-  { label: "02 / New",   title: "CMU\nMedical VLMs", variant: "clay", size: "md", caption: "Collaborative researcher · interpretability & trustworthy biomedical AI", link: "#work" },
-  { label: "03 / Stage", title: "KubeCon EU 2026\nAmsterdam", variant: "paper2", size: "sm", caption: "AI Meets Kubernetes · Cloud Native AI Day", link: "#talks" },
-  { label: "04 / Note",  title: "swiftieintech",   variant: "gold", size: "xs", caption: "2,000+ readers globally", link: "#writing" },
+  { label: "01 / Build", title: "Software Developer\nat IBM Data & AI", variant: "ink",   size: "lg", caption: "watsonx.data infrastructure · Kubernetes · agentic govtech", link: "#work", image: "images/vision-board/ibm-watsonx-data.jpg", alt: "IBM watsonx.data visual from Harini Anand's LinkedIn archive" },
+  { label: "02 / New",   title: "CMU\nMedical VLMs", variant: "clay", size: "md", caption: "Collaborative researcher · interpretability & trustworthy biomedical AI", link: "#work", image: "images/vision-board/cmu-medical-vlms.jpg", alt: "RISE MICCAI summer school graphic representing medical AI research" },
+  { label: "03 / Stage", title: "KubeCon EU 2026\nAmsterdam", variant: "paper2", size: "sm", caption: "AI Meets Kubernetes · Cloud Native AI Day", link: "#talks", image: "images/vision-board/kubecon-eu-2026.jpg", alt: "Group photo from KubeCon Europe" },
+  { label: "04 / Note",  title: "swiftieintech",   variant: "gold", size: "xs", caption: "2,000+ readers globally", link: "#writing", image: "images/vision-board/swiftieintech.jpg", alt: "swiftieintech newsletter cover slide" },
 
   // Row 2
-  { label: "05 / Paper", title: "ISSTA 2026\nAccepted", variant: "paper3", size: "md", caption: "The Discreet Charm of the Bugeoisie · 23.6% acceptance", link: "#research" },
-  { label: "06 / Health", title: "Clinical AI\nacross research tracks", variant: "sage", size: "tall", caption: "Niramai · IIT Hyderabad · Dartmouth · CMU", link: "#research" },
-  { label: "07 / Keynote", title: "MCP Developers Summit\nMumbai & Bengaluru", variant: "ink", size: "sm", caption: "eBPF · MCP · trust boundaries", link: "#talks" },
-  { label: "08 / Lead",  title: "HSP\nHead", variant: "tile3", size: "sm", caption: "Largest FOSS community at PES", link: "#community" },
+  { label: "05 / Paper", title: "ISSTA 2026\nAccepted", variant: "paper3", size: "md", caption: "The Discreet Charm of the Bugeoisie · 23.6% acceptance", link: "#research", image: "images/vision-board/issta-2026.jpg", alt: "Research workshop graphic from Harini Anand's LinkedIn archive" },
+  { label: "06 / Health", title: "Clinical AI\nacross research tracks", variant: "sage", size: "tall", caption: "Niramai · IIT Hyderabad · Dartmouth · CMU", link: "#research", image: "images/vision-board/clinical-ai.jpg", alt: "Group photo from clinical AI research experience" },
+  { label: "07 / Keynote", title: "MCP Developers Summit\nMumbai & Bengaluru", variant: "ink", size: "sm", caption: "eBPF · MCP · trust boundaries", link: "#talks", image: "images/vision-board/mcp-summit.jpg", alt: "Online session screenshot from MCP summit-related speaking work" },
+  { label: "08 / Lead",  title: "HSP\nHead", variant: "tile3", size: "sm", caption: "Largest FOSS community at PES", link: "#community", image: "images/vision-board/hsp.jpg", alt: "PESU Project ROOTS and Hackerspace related recognition graphic" },
 
   // Row 3
-  { label: "09 / Win",   title: "IBM ISL Hackathon\nMost Innovative Solution", variant: "clay", size: "md", caption: "Unified AI Product Discovery", link: "#work" },
-  { label: "10 / Paper", title: "ICAART 2025\nPortugal", variant: "paper2", size: "sm", caption: "Music × stress × XAI", link: "#research" },
-  { label: "11 / Voice", title: "LinkedIn Top Voice\nData Science, 2025", variant: "gold", size: "sm", caption: "Recognition", link: "#writing" },
-  { label: "12 / Mentor", title: "WHPC · Sitara Akka\nFellowship", variant: "paper3", size: "wide", caption: "Mentoring as access-building", link: "#mentoring" },
+  { label: "09 / Win",   title: "IBM ISL Hackathon\nMost Innovative Solution", variant: "clay", size: "md", caption: "Unified AI Product Discovery", link: "#work", image: "images/vision-board/ibm-hackathon.jpg", alt: "Harini Anand receiving recognition at IBM Product Synergy Week" },
+  { label: "10 / Paper", title: "ICAART 2025\nPortugal", variant: "paper2", size: "sm", caption: "Music × stress × XAI", link: "#research", image: "images/vision-board/icaart-2025.jpg", alt: "Conference photo from research presentation archive" },
+  { label: "11 / Voice", title: "LinkedIn Top Voice\nData Science, 2025", variant: "gold", size: "sm", caption: "Recognition", link: "#writing", image: "images/vision-board/linkedin-top-voice.jpg", alt: "LinkedIn profile banner showing Harini Anand" },
+  { label: "12 / Mentor", title: "WHPC · Sitara Akka\nFellowship", variant: "paper3", size: "wide", caption: "Mentoring as access-building", link: "#mentoring", image: "images/vision-board/mentoring.jpg", alt: "Sitara Akka mentoring graphic" },
 
   // Row 4
-  { label: "13 / Read",  title: "Breakdown the BMC",   variant: "ink", size: "sm", caption: "AI Innovator's Playbook", link: "#writing" },
-  { label: "14 / Open",  title: "kubernetes-sigs/lwkd\nEditor & Writer", variant: "tile3", size: "sm", caption: "Advanced from contributor to editor in 2 months", link: "#community" },
-  { label: "15 / Talk",  title: "Apache Beam @ Google", variant: "sage", size: "md", caption: "Agentic data pipelines", link: "#talks" },
-  { label: "16 / Award", title: "Harvard WECode\nTech Fellow", variant: "clay", size: "sm", caption: "Largest student-run WiCS conf", link: "#achievements" },
+  { label: "13 / Read",  title: "Breakdown the BMC",   variant: "ink", size: "sm", caption: "AI Innovator's Playbook", link: "#writing", image: "images/vision-board/breakdown-bmc.jpg", alt: "Breakdown the BMC startup analysis slide" },
+  { label: "14 / Open",  title: "kubernetes-sigs/lwkd\nEditor & Writer", variant: "tile3", size: "sm", caption: "Advanced from contributor to editor in 2 months", link: "#community", image: "images/vision-board/lwkd.jpg", alt: "Kubernetes and cloud native talk screenshot" },
+  { label: "15 / Talk",  title: "Apache Beam @ Google", variant: "sage", size: "md", caption: "Agentic data pipelines", link: "#talks", image: "images/vision-board/apache-beam-google.jpg", alt: "Apache Beam community meetup graphic hosted at Google" },
+  { label: "16 / Award", title: "Harvard WECode\nTech Fellow", variant: "clay", size: "sm", caption: "Largest student-run WiCS conf", link: "#achievements", image: "images/vision-board/harvard-wecode.jpg", alt: "Harvard WECode acceptance message" },
 
   // Row 5
-  { label: "17 / Build", title: "Project ROOTS",  variant: "paper2", size: "md", caption: "Cisco ThingQbator winner · 350+ users · womENcourage 2026 poster", link: "#projects" },
-  { label: "18 / Stage", title: "Women Who Go\nBangalore", variant: "ink", size: "sm", caption: "MCP Server in Go", link: "#talks" },
-  { label: "19 / School", title: "Oxford ML\nSummer School", variant: "gold", size: "sm", caption: "MLx Health & Bio", link: "#achievements" },
-  { label: "20 / Voice", title: "SC26 Women's\nHistory Profile", variant: "paper3", size: "md", caption: "HPC × AI · scale · interpretability", link: "#achievements" }
+  { label: "17 / Build", title: "Project ROOTS",  variant: "paper2", size: "md", caption: "Cisco ThingQbator winner · 350+ users · womENcourage 2026 poster", link: "#projects", image: "images/vision-board/project-roots.jpg", alt: "Project ROOTS group photo from Cisco ThingQbator" },
+  { label: "18 / Stage", title: "Women Who Go\nBangalore", variant: "ink", size: "sm", caption: "MCP Server in Go", link: "#talks", image: "images/vision-board/women-who-go.jpg", alt: "Women Who Go Bangalore meetup group holding signs" },
+  { label: "19 / School", title: "Oxford ML\nSummer School", variant: "gold", size: "sm", caption: "MLx Health & Bio", link: "#achievements", image: "images/vision-board/oxml.jpg", alt: "Oxford Machine Learning Summer School lecture hall graphic" },
+  { label: "20 / Voice", title: "SC26 Women's\nHistory Profile", variant: "paper3", size: "md", caption: "HPC × AI · scale · interpretability", link: "#achievements", image: "images/vision-board/sc26-profile.jpg", alt: "Machine learning systems workshop audience photo" }
 ];
 
 /* ---------- EXPERIENCE TIMELINE ---------- */
