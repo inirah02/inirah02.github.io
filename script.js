@@ -105,7 +105,7 @@
     grid.innerHTML = tiles.map((t) => {
       const sizeClass = `tile--${t.size || 'sm'}`;
       if (t.gallery) {
-        return `<div role="figure" aria-label="${t.alt || 'Gallery image'}" class="tile tile--gallery ${sizeClass} tile--has-image">
+        return `<div role="figure" aria-label="${t.alt || 'Gallery image'}" class="tile tile--gallery tile--has-image">
           <img class="tile__img" src="${t.image}" alt="${t.alt || ''}" loading="lazy"
                 onerror="this.style.display='none';this.parentElement.classList.remove('tile--has-image');">
         </div>`;
