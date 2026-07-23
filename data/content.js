@@ -89,7 +89,15 @@ const BOARD_TILES = [
   { gallery: true, size: "tall", image: "images/vision-board/gallery/gallery-11-kubecon-india-talk.jpg", alt: "Harini Anand giving a lightning talk at KubeCon India" },
   { gallery: true, size: "tall", image: "images/vision-board/gallery/gallery-12-kubecon-eu-talk.jpg", alt: "Harini Anand speaking at Cloud Native AI KubeFlow Day Europe" },
   { gallery: true, size: "portrait", image: "images/vision-board/gallery/gallery-13-ibm-intern.jpg", alt: "Harini Anand at IBM office" },
-  { gallery: true, size: "sm", image: "images/vision-board/gallery/gallery-14-i2ct-presentation.jpg", alt: "Harini Anand presenting research results" }
+  { gallery: true, size: "sm", image: "images/vision-board/gallery/gallery-14-i2ct-presentation.jpg", alt: "Harini Anand presenting research results" },
+  { gallery: true, image: "images/vision-board/gallery/gallery-15-ibm-hack-win.jpg", alt: "Harini Anand with IBM hackathon awards at the Agentic AI Innovation Center" },
+  { gallery: true, image: "images/vision-board/gallery/gallery-16-iit-m-guidance-session.jpg", alt: "Guidance session poster featuring Harini Anand as keynote speaker" },
+  { gallery: true, image: "images/vision-board/gallery/gallery-17-kubecon-india-audience.jpg", alt: "Audience at KubeCon India" },
+  { gallery: true, image: "images/vision-board/gallery/gallery-18-india-foss-talk.jpg", alt: "India FOSS 2025 talk poster for high performance CLIs in Golang" },
+  { gallery: true, image: "images/vision-board/gallery/gallery-19-microsoft-workshop.jpg", alt: "Microsoft workshop group photo" },
+  { gallery: true, image: "images/vision-board/gallery/gallery-20-ml-systems-workshop.jpg", alt: "Harini Anand presenting at an ML systems workshop" },
+  { gallery: true, image: "images/vision-board/gallery/gallery-21-pesu-roots-top10.jpg", alt: "PESU Project Roots top 10 recognition poster" },
+  { gallery: true, image: "images/vision-board/gallery/gallery-22-women-who-go-poster.jpg", alt: "Women Who Go Bangalore talk poster featuring Harini Anand" }
 ];
 
 /* ---------- EXPERIENCE TIMELINE ---------- */

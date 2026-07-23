@@ -467,20 +467,27 @@ em  { font-family: var(--display); font-style: italic; font-weight: 400; }
   width: 100%;
   padding: 0;
   margin: 0 0 12px;
-  cursor: default;
+  cursor: zoom-in;
   background: var(--paper-2);
   border: 1px solid rgba(21,26,31,.08);
   box-shadow: 0 12px 28px -24px rgba(21,26,31,.45);
   break-inside: avoid;
   vertical-align: top;
+  appearance: none;
+  text-align: left;
 }
 .tile--gallery::before,
 .tile--gallery::after {
   display: none;
 }
 .tile--gallery:hover {
-  transform: translateY(-2px);
+  transform: none;
   box-shadow: 0 16px 32px -24px rgba(21,26,31,.5);
+}
+.tile--gallery:focus-visible,
+.tile--gallery.is-previewed {
+  outline: 2px solid rgba(47,111,143,.7);
+  outline-offset: 3px;
 }
 .tile--gallery .tile__img {
   position: static;
@@ -490,11 +497,56 @@ em  { font-family: var(--display); font-style: italic; font-weight: 400; }
   object-fit: contain;
   opacity: 1;
   filter: none;
-  transform: scale(1.001);
-  transition: transform .35s ease;
+  transform: none;
+  transition: opacity .2s ease;
 }
-.tile--gallery:hover .tile__img {
-  transform: scale(1.035);
+
+.gallery-preview {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: grid;
+  place-items: center;
+  padding: clamp(1rem, 3vw, 2.5rem);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .18s ease;
+}
+.gallery-preview.is-visible {
+  opacity: 1;
+}
+.gallery-preview__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(247,248,250,.68);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: opacity .18s ease;
+}
+.gallery-preview.is-touch {
+  pointer-events: auto;
+}
+.gallery-preview.is-touch .gallery-preview__backdrop {
+  opacity: 1;
+}
+.gallery-preview__img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(82vw, 1120px);
+  max-height: 82vh;
+  object-fit: contain;
+  border-radius: var(--radius);
+  border: 1px solid rgba(21,26,31,.12);
+  box-shadow: 0 28px 80px -42px rgba(21,26,31,.55);
+  background: var(--paper);
+  transform: scale(.96);
+  transition: transform .2s ease;
+}
+.gallery-preview.is-visible .gallery-preview__img {
+  transform: scale(1);
 }
 
 /* tile color variants */
@@ -567,6 +619,10 @@ em  { font-family: var(--display); font-style: italic; font-weight: 400; }
 @media (max-width: 740px) {
   .board__grid { columns: 2 150px; column-gap: 10px; }
   .tile--gallery { margin-bottom: 10px; }
+  .gallery-preview__img {
+    max-width: 92vw;
+    max-height: 78vh;
+  }
   .tile--xs, .tile--sm, .tile--md, .tile--lg, .tile--xl, .tile--wide, .tile--tall, .tile--portrait {
     grid-column: span 6;
     grid-row: span 2;

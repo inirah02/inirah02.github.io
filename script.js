@@ -103,13 +103,13 @@
     if (!grid || !window.SITE) return;
     const tiles = window.SITE.BOARD_TILES;
     grid.innerHTML = tiles.map((t) => {
-      const sizeClass = `tile--${t.size || 'sm'}`;
       if (t.gallery) {
-        return `<div role="figure" aria-label="${t.alt || 'Gallery image'}" class="tile tile--gallery tile--has-image">
+        return `<button type="button" aria-label="${t.alt || 'Open gallery image'}" class="tile tile--gallery tile--has-image" data-gallery-src="${t.image}" data-gallery-alt="${t.alt || ''}">
           <img class="tile__img" src="${t.image}" alt="${t.alt || ''}" loading="lazy"
                 onerror="this.style.display='none';this.parentElement.classList.remove('tile--has-image');">
-        </div>`;
+        </button>`;
       }
+      const sizeClass = `tile--${t.size || 'sm'}`;
       const variantClass = `tile--${t.variant || 'paper2'}`;
       const hasImage = t.image && t.image.length > 0;
       const imageHTML = hasImage
@@ -128,6 +128,79 @@
       const role = t.link ? '' : 'role="figure"';
       return `<${tag} ${href} ${role} class="tile ${sizeClass} ${variantClass} ${hasImage ? 'tile--has-image' : ''}">${inner}</${tag}>`;
     }).join('');
+  }
+
+  function bindGalleryPreview() {
+    const tiles = $$('.tile--gallery[data-gallery-src]');
+    if (!tiles.length) return;
+
+    let preview = $('.gallery-preview');
+    if (!preview) {
+      preview = document.createElement('div');
+      preview.className = 'gallery-preview';
+      preview.setAttribute('aria-hidden', 'true');
+      preview.innerHTML = '<div class="gallery-preview__backdrop"></div><img class="gallery-preview__img" alt="">';
+      document.body.appendChild(preview);
+    }
+
+    const previewImg = $('.gallery-preview__img', preview);
+    const backdrop = $('.gallery-preview__backdrop', preview);
+    let touchLocked = false;
+    let lastPointerType = 'mouse';
+
+    function show(tile, mode = 'hover') {
+      previewImg.src = tile.dataset.gallerySrc;
+      previewImg.alt = tile.dataset.galleryAlt || '';
+      preview.dataset.activeSrc = tile.dataset.gallerySrc;
+      touchLocked = mode === 'touch';
+      preview.classList.toggle('is-touch', touchLocked);
+      preview.classList.add('is-visible');
+      preview.setAttribute('aria-hidden', 'false');
+      tile.classList.add('is-previewed');
+    }
+
+    function hide() {
+      preview.classList.remove('is-visible', 'is-touch');
+      preview.setAttribute('aria-hidden', 'true');
+      preview.dataset.activeSrc = '';
+      tiles.forEach(tile => tile.classList.remove('is-previewed'));
+      touchLocked = false;
+    }
+
+    tiles.forEach(tile => {
+      tile.addEventListener('pointerenter', (event) => {
+        if (event.pointerType !== 'touch') show(tile, 'hover');
+      });
+      tile.addEventListener('pointerleave', (event) => {
+        if (event.pointerType !== 'touch' && !touchLocked) hide();
+      });
+      tile.addEventListener('pointerdown', (event) => {
+        lastPointerType = event.pointerType || 'mouse';
+        if (lastPointerType === 'touch') tile.dataset.touchPending = 'true';
+      });
+      tile.addEventListener('focus', () => {
+        if (tile.dataset.touchPending === 'true') return;
+        show(tile, 'hover');
+      });
+      tile.addEventListener('blur', () => {
+        if (!touchLocked) hide();
+      });
+      tile.addEventListener('click', (event) => {
+        if (lastPointerType !== 'touch') return;
+        event.preventDefault();
+        delete tile.dataset.touchPending;
+        if (preview.classList.contains('is-visible') && preview.dataset.activeSrc === tile.dataset.gallerySrc) hide();
+        else show(tile, 'touch');
+      });
+    });
+
+    backdrop.addEventListener('click', hide);
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') hide();
+    });
+    window.addEventListener('scroll', () => {
+      if (touchLocked) hide();
+    }, { passive: true });
   }
 
   /* ---------- NEWS / LATEST ---------- */
@@ -332,6 +405,7 @@
     renderMentoring();
     renderAchievements();
     bindNav();
+    bindGalleryPreview();
     // Initialize any carousels that were rendered (talks re-initializes on filter change)
     initCarousels(document);
   }
