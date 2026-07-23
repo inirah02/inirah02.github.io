@@ -414,6 +414,32 @@
     });
   }
 
+  function bindMotionLayer() {
+    const paceFill = $('.scroll-pace__fill');
+    const route = $('.cursor-route');
+
+    if (paceFill) {
+      const updateScrollPace = () => {
+        const maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        const progress = Math.min(1, Math.max(0, window.scrollY / maxScroll));
+        document.documentElement.style.setProperty('--scroll-progress', progress.toFixed(4));
+      };
+      updateScrollPace();
+      window.addEventListener('scroll', updateScrollPace, { passive: true });
+      window.addEventListener('resize', updateScrollPace);
+    }
+
+    if (!route || REDUCE_MOTION || !window.matchMedia('(hover: hover)').matches) return;
+
+    let hideTimer;
+    window.addEventListener('pointermove', (event) => {
+      route.style.transform = `translate3d(${event.clientX - 110}px, ${event.clientY - 110}px, 0) scale(.82)`;
+      route.classList.add('is-visible');
+      window.clearTimeout(hideTimer);
+      hideTimer = window.setTimeout(() => route.classList.remove('is-visible'), 900);
+    }, { passive: true });
+  }
+
   /* ---------- INIT ---------- */
   function init() {
     renderBoard();
@@ -429,6 +455,7 @@
     renderAchievements();
     bindNav();
     bindThemeToggle();
+    bindMotionLayer();
     bindGalleryPreview();
     // Initialize any carousels that were rendered (talks re-initializes on filter change)
     initCarousels(document);

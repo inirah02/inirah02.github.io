@@ -24,7 +24,7 @@
     }
   })();
 </script>
-<link rel="stylesheet" href="styles.css?v=20260723-7" />
+<link rel="stylesheet" href="styles.css?v=20260723-8" />
 </head>
 <body>
 
@@ -59,6 +59,11 @@
 
 <!-- ============ HERO ============ -->
 <section class="hero">
+  <div class="hero__sketch" aria-hidden="true">
+    <span class="sketch sketch--math">E[y | x] = Σ wᵢφᵢ(x)</span>
+    <span class="sketch sketch--go">func route(ctx context.Context) error</span>
+    <span class="sketch sketch--bits">0101 / kube / mcp / eBPF</span>
+  </div>
   <div class="hero__grid">
     <figure class="hero__portrait">
       <img src="images/about/harini-headshot.jpg" alt="Harini Anand headshot" width="464" height="469" />
@@ -218,7 +223,6 @@
         <span>LinkedIn</span><span>Substack</span><span>Newsletter</span>
       </div>
       <div class="series__actions">
-        <a class="libutton" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7271142545974272000" target="_blank" rel="noopener">Subscribe on LinkedIn</a>
         <a class="btn btn--small" href="https://harinianand.substack.com" target="_blank" rel="noopener">Read Substack</a>
       </div>
     </article>
@@ -361,7 +365,15 @@
 
 </main>
 
-<script src="data/content.js?v=20260723-7"></script>
-<script src="script.js?v=20260723-7"></script>
+<div class="scroll-pace" aria-hidden="true">
+  <span class="scroll-pace__label">pace</span>
+  <span class="scroll-pace__track"><span class="scroll-pace__fill"></span></span>
+</div>
+<svg class="cursor-route" aria-hidden="true" width="220" height="220" viewBox="0 0 220 220">
+  <path d="M18 188 C 45 134, 82 156, 106 100 S 164 58, 202 24" />
+</svg>
+
+<script src="data/content.js?v=20260723-8"></script>
+<script src="script.js?v=20260723-8"></script>
 </body>
 </html>
