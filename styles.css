@@ -462,6 +462,31 @@ em  { font-family: var(--display); font-style: italic; font-weight: 400; }
 }
 .tile:hover .tile__caption { opacity: 1; transform: translateY(0); }
 
+.tile--gallery {
+  padding: 0;
+  cursor: default;
+  background: var(--paper-2);
+  border: 1px solid rgba(21,26,31,.08);
+  box-shadow: 0 14px 32px -28px rgba(21,26,31,.5);
+}
+.tile--gallery::before,
+.tile--gallery::after {
+  display: none;
+}
+.tile--gallery:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 36px -28px rgba(21,26,31,.55);
+}
+.tile--gallery .tile__img {
+  opacity: 1;
+  filter: none;
+  transform: scale(1.001);
+  transition: transform .35s ease;
+}
+.tile--gallery:hover .tile__img {
+  transform: scale(1.035);
+}
+
 /* tile color variants */
 .tile--ink     { background: var(--ink); color: var(--paper); }
 .tile--ink .tile__label { color: var(--paper-3); }

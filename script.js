@@ -104,6 +104,12 @@
     const tiles = window.SITE.BOARD_TILES;
     grid.innerHTML = tiles.map((t) => {
       const sizeClass = `tile--${t.size || 'sm'}`;
+      if (t.gallery) {
+        return `<div role="figure" aria-label="${t.alt || 'Gallery image'}" class="tile tile--gallery ${sizeClass} tile--has-image">
+          <img class="tile__img" src="${t.image}" alt="${t.alt || ''}" loading="lazy"
+                onerror="this.style.display='none';this.parentElement.classList.remove('tile--has-image');">
+        </div>`;
+      }
       const variantClass = `tile--${t.variant || 'paper2'}`;
       const hasImage = t.image && t.image.length > 0;
       const imageHTML = hasImage
