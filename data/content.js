@@ -97,7 +97,8 @@ const BOARD_TILES = [
   { gallery: true, image: "images/vision-board/gallery/gallery-19-microsoft-workshop.jpg", alt: "Microsoft workshop group photo" },
   { gallery: true, image: "images/vision-board/gallery/gallery-20-ml-systems-workshop.jpg", alt: "Harini Anand presenting at an ML systems workshop" },
   { gallery: true, image: "images/vision-board/gallery/gallery-21-pesu-roots-top10.jpg", alt: "PESU Project Roots top 10 recognition poster" },
-  { gallery: true, image: "images/vision-board/gallery/gallery-22-women-who-go-poster.jpg", alt: "Women Who Go Bangalore talk poster featuring Harini Anand" }
+  { gallery: true, image: "images/vision-board/gallery/gallery-22-women-who-go-poster.jpg", alt: "Women Who Go Bangalore talk poster featuring Harini Anand" },
+  { gallery: true, image: "images/vision-board/gallery/gallery-23-mcp-dev-summit.jpg", alt: "Harini Anand presenting at MCP Dev Summit Bengaluru" }
 ];
 
 /* ---------- EXPERIENCE TIMELINE ---------- */
