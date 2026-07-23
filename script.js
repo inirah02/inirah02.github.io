@@ -402,7 +402,7 @@
       const text = $('.theme-toggle__text', toggle);
       if (text) text.textContent = theme === 'dark' ? 'Light' : 'Dark';
       try {
-        localStorage.setItem('theme', theme);
+        localStorage.setItem('portfolio-theme', theme);
       } catch (error) {
         // Theme still changes for this page view if storage is unavailable.
       }

@@ -17,13 +17,6 @@
 /* ---------- NEWS / LATEST ---------- */
 const NEWS = [
   {
-    date: "Ongoing",
-    category: "Newsletter",
-    title: "swiftieintech on LinkedIn",
-    desc: "Primary source for regularly updated short-form posts, newsletter issues, technical notes, and community updates. Subscribe directly through LinkedIn.",
-    link: "https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7271142545974272000"
-  },
-  {
     date: "Jul 2026",
     category: "Research",
     title: "Started collaborative research with CMU on medical vision-language models",
