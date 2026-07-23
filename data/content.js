@@ -17,13 +17,6 @@
 /* ---------- NEWS / LATEST ---------- */
 const NEWS = [
   {
-    date: "Jun 2026",
-    category: "Substack",
-    title: "Published: Your Observability Stack Is 40% Overhead Before It Serves a Single Request",
-    desc: "Latest verified Substack RSS item as of July 5, 2026. Long-form systems essay on eBPF, MCP, Kubernetes observability, and replacing sidecar sprawl with kernel-level truth.",
-    link: "https://harinianand.substack.com/p/your-observability-stack-is-40-overhead"
-  },
-  {
     date: "Ongoing",
     category: "Newsletter",
     title: "swiftieintech on LinkedIn",
@@ -524,7 +517,7 @@ const COMMUNITY = [
 /* ---------- MENTORING & TEACHING (1:1, coursework, outreach) ---------- */
 const MENTORING = [
   { role: "Mentor", org: "Women in High Performance Computing (WHPC)", date: "Jan 2026 to Present", desc: "Mentor early-career and aspiring professionals in the HPC ecosystem through structured guidance on technical development, research direction, confidence-building, and career navigation." },
-  { role: "Fellow / Mentor", org: "Sitara Akka", date: "2025 to Present", desc: "Part of a volunteer mentoring collective that has supported 300 students over 8 months through academic, career, and personal-development guidance, including support for students navigating difficult circumstances." },
+  { role: "Fellow / Mentor", org: "Sitara Akka", date: "2025 to Present", desc: "Part of a volunteer mentoring collective that has supported 300 students over 8 months through academic, career, and personal-development guidance, including rural Karnataka students and mentees globally, including Turkey." },
   { role: "Founder / Writer", org: "swiftieintech", date: "2024 to Present", desc: "Write technical and career-focused AI content for a global reader community of 2,000+ subscribers. Translates emerging AI, cloud-native, and research ideas into accessible learning resources." },
   { role: "Teaching Assistant", org: "Generative AI & Its Applications, PES University", date: "Dec 2024 to Jun 2025", desc: "Supported course delivery, student mentoring, and hands-on learning around generative AI systems, applied AI tools, and responsible AI workflows." },
   { role: "Teaching Assistant", org: "Linear Algebra, PES University", date: "Prior semester", desc: "Supported undergraduate instruction, student doubt-clearing, and mathematical foundations for machine learning, data science, and AI coursework." },

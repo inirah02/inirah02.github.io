@@ -4,9 +4,9 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Harini Anand · Software Developer, Researcher, Writer</title>
-<meta name="description" content="Harini Anand: Software Developer at IBM Data & AI (watsonx.data). Researcher across UIUC, Georgia Tech, Dartmouth, and CMU. Writer, speaker, and community builder across Kubernetes, MCP, data systems, and biomedical AI." />
+<meta name="description" content="Harini Anand: Data & AI at IBM; research at UIUC, Georgia Tech, Dartmouth, and CMU; Harvard Tech Fellow, AWS AI ML Scholar, Google KaggleX Mentee, O Reilly Scholar, Cisco ThingQbator Winner, and Oxford, ACM, MIT Summer School Alumna." />
 <meta property="og:title" content="Harini Anand" />
-<meta property="og:description" content="Software Developer at IBM Data & AI. Researcher across UIUC, Georgia Tech, Dartmouth, and CMU. Speaker and technical writer working across AI infrastructure, biomedical AI, and cloud-native systems." />
+<meta property="og:description" content="Data & AI at IBM; research at UIUC, Georgia Tech, Dartmouth, and CMU; Harvard Tech Fellow, AWS AI ML Scholar, Google KaggleX Mentee, O Reilly Scholar, Cisco ThingQbator Winner, and Oxford, ACM, MIT Summer School Alumna." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://inirah02.github.io/" />
 <meta property="og:image" content="images/misc/og.jpg" />
@@ -14,7 +14,18 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20260723-4" />
+<script>
+  (function () {
+    try {
+      var savedTheme = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.dataset.theme = savedTheme || (prefersDark ? 'dark' : 'light');
+    } catch (error) {
+      document.documentElement.dataset.theme = 'light';
+    }
+  })();
+</script>
+<link rel="stylesheet" href="styles.css?v=20260723-5" />
 </head>
 <body>
 
@@ -35,6 +46,10 @@
       <a href="#cv">CV</a>
       <a href="#contact">Contact</a>
     </nav>
+    <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+      <span class="theme-toggle__icon" aria-hidden="true"></span>
+      <span class="theme-toggle__text">Dark</span>
+    </button>
     <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -47,7 +62,8 @@
 <section class="hero">
   <div class="hero__grid">
     <div class="hero__meta">
-      <span class="eyebrow">Bengaluru, India · Est. 2020</span>
+      <span class="eyebrow">Data &amp; AI at IBM</span>
+      <span class="eyebrow">Research across UIUC · Georgia Tech · Dartmouth · CMU</span>
     </div>
     <figure class="hero__portrait">
       <img src="images/about/harini-headshot.jpg" alt="Harini Anand headshot" width="464" height="469" />
@@ -59,6 +75,8 @@
       <span class="hero__line">research &amp; words.</span>
     </h1>
     <div class="hero__lede">
+      <div class="hero__command">$whoami</div>
+      <p class="hero__headline">Data &amp; AI at IBM | Research at UIUC, Georgia Tech, Dartmouth, CMU | Harvard Tech Fellow | AWS AI ML Scholar | Google KaggleX Mentee | Oxford, ACM, MIT Summer School Alumna | O Reilly Scholar | Cisco ThingQbator Winner</p>
       <p>Software Developer in <strong>IBM Data &amp; AI</strong>, working on <em>watsonx.data</em> infrastructure, cloud-native systems, and AI developer tooling. Researcher across <strong>UIUC</strong>, <strong>Georgia Tech</strong>, <strong>Dartmouth</strong>, and <strong>CMU</strong>, at the intersection of software engineering research, computational biology, biomedical AI, and trustworthy medical vision-language models. Beyond research and engineering, I build technical communities through talks, open source, mentoring, and public scholarship across AI, Kubernetes, MCP, and data systems.</p>
       <div class="hero__cta">
         <a href="#work" class="btn btn--primary">View work</a>
@@ -75,7 +93,7 @@
         <li><span class="dot"></span>1 paper accept [ISSTA]</li>
         <li><span class="dot"></span>Building watsonx.data infrastructure</li>
         <li><span class="dot"></span>Leading pan lab agentic govtech initiatives at IBM</li>
-        <li><span class="dot"></span>Mentoring rural Karnataka students</li>
+        <li><span class="dot"></span>Mentoring rural Karnataka students and global mentees, including Turkey</li>
         <li><span class="dot"></span>Creative strategizing brand partnerships with OpenAI, Teachable, Spotify, Maybelline, &amp; more</li>
         <li><span class="dot"></span>Writing a newsletter for 2,000+ readers globally</li>
         <li><span class="dot"></span>Running a 100 km/month and improving my VO2 max</li>
@@ -122,8 +140,8 @@
     </div>
     <div class="about__col">
       <p>Earlier, I interned at <strong>Niramai Health Analytix</strong> on breast-cancer screening tools, did research at <strong>IIT Hyderabad</strong> on gene regulatory networks via PySCENIC, and built <em>Project ROOTS</em>, a cognitive-games app for delaying dementia onset that won the Cisco ThingQbator national cohort, reached 350+ users, and whose extension was accepted as a poster at ACM womENcourage 2026.</p>
-      <p>I led <strong>Hackerspace (HSP)</strong>, the largest FOSS community at PES University, started <em>Project Expo</em>, and was a core member of GDSC and ACM-W chapters. I've taught Linear Algebra and Generative AI as a TA, mentor through <em>Sitara Akka</em> and Women in HPC, review for <em>AIES 2026</em>, <em>ICLR MemAgents</em>, <em>GopherCon US</em>, and <em>PEARC 2026</em>, and serve as Editor &amp; Writer for <em>kubernetes-sigs/lwkd</em>.</p>
-      <p>I write at the intersection of technology and accessibility: <em>swiftieintech</em>, my newsletter that uses Taylor Swift's discography as a thematic frame for technical concepts (2,000+ readers globally), and <em>Breakdown the BMC: AI Innovator's Playbook</em>, a biweekly series with Aishwarya Srinivasan analyzing AI startups. Named a LinkedIn Top Voice in Data Science, 2025.</p>
+      <p>I led <strong>Hackerspace (HSP)</strong>, the largest FOSS community at PES University, started <em>Project Expo</em>, and was a core member of GDSC and ACM-W chapters. I've taught Linear Algebra and Generative AI as a TA, mentor through <em>Sitara Akka</em> and Women in HPC, mentor rural Karnataka students and global mentees including Turkey, review for <em>AIES 2026</em>, <em>ICLR MemAgents</em>, <em>GopherCon US</em>, and <em>PEARC 2026</em>, and serve as Editor &amp; Writer for <em>kubernetes-sigs/lwkd</em>.</p>
+      <p>I write at the intersection of technology and accessibility: <em>swiftieintech</em>, my newsletter that uses Taylor Swift's discography as a thematic frame for technical concepts (2,000+ readers globally), and <em>Breakdown the BMC: AI Innovator's Playbook</em>, a biweekly series with Aishwarya Srinivasan analyzing AI startups. I also work as a content strategist for Aishwarya's 1M+ AI community, lead brand partnerships, and help shape technical storytelling across creator-led AI education. Named a LinkedIn Top Voice in Data Science, 2025.</p>
       <p class="about__sig">H.</p>
     </div>
   </div>
@@ -135,6 +153,7 @@
       <li>Researcher</li>
       <li>Writer</li>
       <li>Content Strategist</li>
+      <li>Creative Director</li>
       <li>Speaker</li>
       <li>Mentor</li>
     </ul>
@@ -221,16 +240,6 @@
         <a class="link-arrow" href="https://www.linkedin.com/newsletters/swiftieintech-7268168042189156353/" target="_blank" rel="noopener">Read on LinkedIn →</a>
         <a class="libutton" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7271142545974272000" target="_blank" rel="noopener">Subscribe on LinkedIn</a>
       </div>
-    </article>
-
-    <article class="series__card">
-      <span class="eyebrow">Substack · Latest verified RSS item</span>
-      <h3>Your Observability Stack Is 40% Overhead Before It Serves a Single Request</h3>
-      <p>Long-form systems writing on eBPF, MCP, Kubernetes observability, and agentic infrastructure. Latest item verified from Harini's Substack RSS feed on July 5, 2026.</p>
-      <div class="series__tags">
-        <span>eBPF</span><span>MCP</span><span>Kubernetes</span><span>Observability</span>
-      </div>
-      <a class="link-arrow" href="https://harinianand.substack.com/p/your-observability-stack-is-40-overhead" target="_blank" rel="noopener">Read on Substack →</a>
     </article>
 
     <article class="series__card">
@@ -358,7 +367,7 @@
 
 </main>
 
-<script src="data/content.js?v=20260723-4"></script>
-<script src="script.js?v=20260723-4"></script>
+<script src="data/content.js?v=20260723-5"></script>
+<script src="script.js?v=20260723-5"></script>
 </body>
 </html>

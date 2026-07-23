@@ -391,6 +391,29 @@
     });
   }
 
+  function bindThemeToggle() {
+    const toggle = $('.theme-toggle');
+    if (!toggle) return;
+
+    function setTheme(theme) {
+      document.documentElement.dataset.theme = theme;
+      toggle.setAttribute('aria-pressed', theme === 'dark');
+      toggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+      const text = $('.theme-toggle__text', toggle);
+      if (text) text.textContent = theme === 'dark' ? 'Light' : 'Dark';
+      try {
+        localStorage.setItem('theme', theme);
+      } catch (error) {
+        // Theme still changes for this page view if storage is unavailable.
+      }
+    }
+
+    setTheme(document.documentElement.dataset.theme || 'light');
+    toggle.addEventListener('click', () => {
+      setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark');
+    });
+  }
+
   /* ---------- INIT ---------- */
   function init() {
     renderBoard();
@@ -405,6 +428,7 @@
     renderMentoring();
     renderAchievements();
     bindNav();
+    bindThemeToggle();
     bindGalleryPreview();
     // Initialize any carousels that were rendered (talks re-initializes on filter change)
     initCarousels(document);
