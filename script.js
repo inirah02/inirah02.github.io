@@ -414,30 +414,103 @@
     });
   }
 
-  function bindMotionLayer() {
-    const paceFill = $('.scroll-pace__fill');
-    const route = $('.cursor-route');
+  function bindSplashCursor() {
+    const canvas = $('.splash-cursor');
+    const pointerFine = window.matchMedia && window.matchMedia('(pointer: fine)').matches;
+    if (!canvas || REDUCE_MOTION || !pointerFine) return;
 
-    if (paceFill) {
-      const updateScrollPace = () => {
-        const maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
-        const progress = Math.min(1, Math.max(0, window.scrollY / maxScroll));
-        document.documentElement.style.setProperty('--scroll-progress', progress.toFixed(4));
-      };
-      updateScrollPace();
-      window.addEventListener('scroll', updateScrollPace, { passive: true });
-      window.addEventListener('resize', updateScrollPace);
+    const ctx = canvas.getContext('2d', { alpha: true });
+    if (!ctx) return;
+
+    let dpr = 1;
+    let width = 0;
+    let height = 0;
+    let raf = 0;
+    let lastX = -1000;
+    let lastY = -1000;
+    let lastEmit = 0;
+    const particles = [];
+
+    function isDark() {
+      return document.documentElement.dataset.theme === 'dark';
     }
 
-    if (!route || REDUCE_MOTION || !window.matchMedia('(hover: hover)').matches) return;
+    function resizeCanvas() {
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      width = window.innerWidth;
+      height = window.innerHeight;
+      canvas.width = Math.round(width * dpr);
+      canvas.height = Math.round(height * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
 
-    let hideTimer;
-    window.addEventListener('pointermove', (event) => {
-      route.style.transform = `translate3d(${event.clientX - 110}px, ${event.clientY - 110}px, 0) scale(.82)`;
-      route.classList.add('is-visible');
-      window.clearTimeout(hideTimer);
-      hideTimer = window.setTimeout(() => route.classList.remove('is-visible'), 900);
-    }, { passive: true });
+    function color(alpha) {
+      return isDark() ? `rgba(126, 182, 209, ${alpha})` : `rgba(47, 111, 143, ${alpha})`;
+    }
+
+    function emit(x, y) {
+      const now = performance.now();
+      const distance = Math.hypot(x - lastX, y - lastY);
+      if (distance < 16 && now - lastEmit < 36) return;
+
+      const count = distance > 54 ? 4 : 3;
+      for (let i = 0; i < count; i += 1) {
+        const angle = Math.random() * Math.PI * 2;
+        const speed = 0.35 + Math.random() * 1.15;
+        particles.push({
+          x: x + (Math.random() - 0.5) * 8,
+          y: y + (Math.random() - 0.5) * 8,
+          vx: Math.cos(angle) * speed,
+          vy: Math.sin(angle) * speed,
+          radius: 3 + Math.random() * 7,
+          life: 1,
+          decay: 0.018 + Math.random() * 0.018
+        });
+      }
+
+      if (particles.length > 120) particles.splice(0, particles.length - 120);
+      lastX = x;
+      lastY = y;
+      lastEmit = now;
+      if (!raf) raf = requestAnimationFrame(draw);
+    }
+
+    function draw() {
+      raf = 0;
+      ctx.clearRect(0, 0, width, height);
+      ctx.globalCompositeOperation = isDark() ? 'screen' : 'multiply';
+
+      for (let i = particles.length - 1; i >= 0; i -= 1) {
+        const p = particles[i];
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vx *= 0.985;
+        p.vy *= 0.985;
+        p.radius += 0.18;
+        p.life -= p.decay;
+
+        if (p.life <= 0) {
+          particles.splice(i, 1);
+          continue;
+        }
+
+        const gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.radius * 2.4);
+        gradient.addColorStop(0, color(0.22 * p.life));
+        gradient.addColorStop(0.45, color(0.08 * p.life));
+        gradient.addColorStop(1, color(0));
+        ctx.fillStyle = gradient;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius * 2.4, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      ctx.globalCompositeOperation = 'source-over';
+      if (particles.length) raf = requestAnimationFrame(draw);
+    }
+
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener('pointermove', (event) => emit(event.clientX, event.clientY), { passive: true });
   }
 
   /* ---------- INIT ---------- */
@@ -455,7 +528,7 @@
     renderAchievements();
     bindNav();
     bindThemeToggle();
-    bindMotionLayer();
+    bindSplashCursor();
     bindGalleryPreview();
     // Initialize any carousels that were rendered (talks re-initializes on filter change)
     initCarousels(document);

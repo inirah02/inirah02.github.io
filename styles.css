@@ -269,72 +269,15 @@ li {
   box-shadow: 0 0 0 3px rgba(210,173,100,.18);
 }
 
-.scroll-pace {
-  position: fixed;
-  right: clamp(.75rem, 1.5vw, 1.25rem);
-  top: 50%;
-  z-index: 45;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: .55rem;
-  transform: translateY(-50%);
-  pointer-events: none;
-}
-.scroll-pace__label {
-  writing-mode: vertical-rl;
-  text-transform: uppercase;
-  font: 800 10px/1 var(--header);
-  letter-spacing: .16em;
-  color: var(--ink-3);
-}
-.scroll-pace__track {
-  position: relative;
-  width: 2px;
-  height: clamp(110px, 24vh, 230px);
-  overflow: hidden;
-  border-radius: 999px;
-  background: var(--rule);
-}
-.scroll-pace__fill {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: calc(var(--scroll-progress, 0) * 100%);
-  border-radius: inherit;
-  background: linear-gradient(180deg, var(--gold), #FC4C02);
-  transition: height .12s linear;
-}
-
-.cursor-route {
+.splash-cursor {
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 44;
+  width: 100vw;
+  height: 100vh;
+  z-index: 70;
   pointer-events: none;
-  opacity: 0;
-  transform: translate3d(-120px, -120px, 0) scale(.82);
-  transition: opacity .22s ease, transform .12s ease-out;
-  mix-blend-mode: multiply;
-}
-:root[data-theme="dark"] .cursor-route { mix-blend-mode: screen; }
-.cursor-route path {
-  fill: none;
-  stroke: #FC4C02;
-  stroke-width: 3;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: 320;
-  stroke-dashoffset: 320;
-  opacity: .72;
-}
-.cursor-route.is-visible { opacity: .42; }
-.cursor-route.is-visible path {
-  animation: routeDraw .9s ease forwards;
-}
-@keyframes routeDraw {
-  to { stroke-dashoffset: 0; }
+  opacity: .62;
 }
 
 .nav__toggle {
@@ -373,7 +316,6 @@ li {
     transform: translateY(0); opacity: 1; pointer-events: auto;
   }
   .nav__toggle { display: flex; }
-  .scroll-pace { display: none; }
 }
 
 /* =====================================================
@@ -440,17 +382,6 @@ li {
 }
 .hero__line {
   display: block;
-  opacity: 0;
-  transform: translateY(14px);
-  animation: rise .9s ease forwards;
-}
-.hero__line:nth-child(1) { animation-delay: .05s; }
-.hero__line:nth-child(2) { animation-delay: .15s; }
-.hero__line:nth-child(3) { animation-delay: .25s; }
-.hero__line:nth-child(4) { animation-delay: .35s; }
-
-@keyframes rise {
-  to { opacity: 1; transform: translateY(0); }
 }
 
 .hero__lede p {
@@ -555,39 +486,40 @@ li {
 
 .hero__meta { display: flex; align-items: center; gap: 1rem; }
 
-.hero__sketch {
+.neural-bg {
   position: absolute;
   inset: 0;
   pointer-events: none;
   z-index: 0;
   overflow: hidden;
 }
-.sketch {
+.neural-sketch {
   position: absolute;
-  display: inline-block;
-  font-family: var(--header);
-  font-weight: 700;
-  font-size: clamp(.75rem, 1vw, .95rem);
   color: var(--clay);
-  opacity: .16;
-  border: 1px solid rgba(47,111,143,.18);
-  border-radius: 999px;
-  padding: .35rem .65rem;
-  background: rgba(247,248,250,.42);
-  transform: rotate(-4deg);
-  animation: sketchDrift 11s ease-in-out infinite;
+  opacity: .105;
+  filter: drop-shadow(0 12px 22px rgba(47,111,143,.06));
 }
-:root[data-theme="dark"] .sketch {
-  background: rgba(16,19,22,.42);
-  border-color: rgba(126,182,209,.2);
-  opacity: .2;
+:root[data-theme="dark"] .neural-sketch { opacity: .14; }
+.neural-sketch--one {
+  width: min(18vw, 210px);
+  min-width: 112px;
+  top: 8%;
+  left: 2.5%;
+  transform: rotate(-5deg);
 }
-.sketch--math { top: 14%; left: 4%; }
-.sketch--go { top: 31%; right: 3%; transform: rotate(3deg); animation-delay: -3s; }
-.sketch--bits { bottom: 18%; left: 9%; transform: rotate(2deg); animation-delay: -6s; }
-@keyframes sketchDrift {
-  0%, 100% { translate: 0 0; }
-  50% { translate: 0 -10px; }
+.neural-sketch--two {
+  width: min(15vw, 170px);
+  min-width: 92px;
+  top: 28%;
+  right: 5%;
+  transform: rotate(4deg);
+}
+.neural-sketch--three {
+  width: min(16vw, 190px);
+  min-width: 96px;
+  bottom: 13%;
+  left: 8%;
+  transform: rotate(2deg);
 }
 
 /* =====================================================
@@ -1179,7 +1111,9 @@ li {
   border-bottom: 1px solid var(--rule);
   align-items: baseline;
   transition: background .25s ease;
+  min-width: 0;
 }
+.talk__main { min-width: 0; }
 .talk:hover { background: rgba(47,111,143,0.045); }
 .talk__date {
   font-family: var(--mono);
@@ -1514,8 +1448,7 @@ li {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-  .cursor-route,
-  .hero__sketch {
+  .splash-cursor {
     display: none;
   }
 }
