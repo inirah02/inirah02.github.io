@@ -374,6 +374,101 @@
     `).join('');
   }
 
+  function emphasizeNumbers(scope = document) {
+    const skipTags = new Set(['SCRIPT', 'STYLE', 'NOSCRIPT', 'TEXTAREA', 'INPUT']);
+    const numericPattern = /(\$[\d,]+(?:\.\d+)?(?:\/month)?|\b\d+(?:,\d{3})*\+?\s+of\s+\d+(?:,\d{3})*\+?|\b\d+(?:,\d{3})*(?:\.\d+)?\s*L INR\b|\b\d+(?:,\d{3})*(?:\.\d+)?M\+\b|\b\d+(?:,\d{3})*(?:\.\d+)?K\+\b|\b\d+(?:\.\d+)?%|\b\d+(?:,\d{3})*(?:\.\d+)?\+?)/g;
+    const walker = document.createTreeWalker(scope, NodeFilter.SHOW_TEXT, {
+      acceptNode(node) {
+        const parent = node.parentElement;
+        if (!parent || skipTags.has(parent.tagName) || parent.closest('.num-em')) {
+          return NodeFilter.FILTER_REJECT;
+        }
+        numericPattern.lastIndex = 0;
+        return numericPattern.test(node.nodeValue) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+      }
+    });
+
+    const nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+
+    nodes.forEach(node => {
+      const fragment = document.createDocumentFragment();
+      let lastIndex = 0;
+      node.nodeValue.replace(numericPattern, (match, _group, offset) => {
+        if (offset > lastIndex) {
+          fragment.appendChild(document.createTextNode(node.nodeValue.slice(lastIndex, offset)));
+        }
+        const strong = document.createElement('strong');
+        strong.className = 'num-em';
+        strong.textContent = match;
+        fragment.appendChild(strong);
+        lastIndex = offset + match.length;
+        return match;
+      });
+      if (lastIndex < node.nodeValue.length) {
+        fragment.appendChild(document.createTextNode(node.nodeValue.slice(lastIndex)));
+      }
+      node.parentNode.replaceChild(fragment, node);
+    });
+  }
+
+  function bindHeroTyping() {
+    const target = $('.hero__type[data-hero-title]');
+    if (!target || REDUCE_MOTION || window.matchMedia('(max-width: 620px)').matches) return;
+
+    const full = target.dataset.heroTitle || target.textContent.trim();
+    const accent = 'intersection';
+    const beforeAccent = full.indexOf(accent);
+    let index = 0;
+    let last = 0;
+
+    function escapeHTML(value) {
+      return value
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function render(count) {
+      const before = beforeAccent >= 0 ? full.slice(0, beforeAccent) : full;
+      const highlighted = beforeAccent >= 0 ? full.slice(beforeAccent, beforeAccent + accent.length) : '';
+      const after = beforeAccent >= 0 ? full.slice(beforeAccent + accent.length) : '';
+
+      if (beforeAccent < 0 || count <= before.length) {
+        target.innerHTML = escapeHTML(full.slice(0, count));
+        return;
+      }
+
+      const accentCount = Math.min(highlighted.length, count - before.length);
+      const afterCount = Math.max(0, count - before.length - highlighted.length);
+      target.innerHTML =
+        escapeHTML(before) +
+        `<em>${escapeHTML(highlighted.slice(0, accentCount))}</em>` +
+        escapeHTML(after.slice(0, afterCount));
+    }
+
+    target.classList.add('is-typing');
+    target.textContent = '';
+
+    function tick(now) {
+      if (!last) last = now;
+      if (now - last >= 24) {
+        index += 1;
+        render(index);
+        last = now;
+      }
+
+      if (index < full.length) {
+        requestAnimationFrame(tick);
+      } else {
+        render(full.length);
+      }
+    }
+
+    requestAnimationFrame(tick);
+  }
+
   /* ---------- MOBILE NAV ---------- */
   function bindNav() {
     const toggle = $('.nav__toggle');
@@ -528,8 +623,10 @@
     renderAchievements();
     bindNav();
     bindThemeToggle();
+    bindHeroTyping();
     bindSplashCursor();
     bindGalleryPreview();
+    emphasizeNumbers(document.body);
     // Initialize any carousels that were rendered (talks re-initializes on filter change)
     initCarousels(document);
   }
