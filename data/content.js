@@ -63,14 +63,12 @@ const NEWS = [
 /* ---------- VISION BOARD TILES ---------- */
 const BOARD_TILES = [
   { gallery: true, size: "wide", image: "images/vision-board/gallery/gallery-01-acm-summer-school.jpg", alt: "ACM summer school group photo" },
-  { gallery: true, size: "sm", image: "images/vision-board/gallery/gallery-02-core-x-lightning-talks.jpg", alt: "IBM Core-X lightning talks poster" },
   { gallery: true, size: "sm", image: "images/vision-board/gallery/gallery-03-cummins-talk.jpg", alt: "Cummins College Engineering Decoded talk poster" },
   { gallery: true, size: "md", image: "images/vision-board/gallery/gallery-04-kubecon-india-stage.jpg", alt: "Harini Anand speaking at KubeCon India" },
   { gallery: true, size: "tall", image: "images/vision-board/gallery/gallery-05-wids-intuit.jpg", alt: "Women in Data Science Bangalore at Intuit speaker poster" },
   { gallery: true, size: "sm", image: "images/vision-board/gallery/gallery-06-women-who-go.jpg", alt: "Women Who Go Bangalore group photo" },
   { gallery: true, size: "wide", image: "images/vision-board/gallery/gallery-07-wids-interview.jpg", alt: "WiDS Stanford ambassador interview banner" },
   { gallery: true, size: "tall", image: "images/vision-board/gallery/gallery-08-wids-2024.jpg", alt: "Harini Anand at IIM Bangalore for WiDS 2024" },
-  { gallery: true, size: "md", image: "images/vision-board/gallery/gallery-09-product-synergy-speaker.jpg", alt: "Harini Anand speaking with a microphone at IBM Product Synergy Week" },
   { gallery: true, size: "lg", image: "images/vision-board/gallery/gallery-10-product-synergy-panel.jpg", alt: "IBM Product Synergy Week panel discussion" },
   { gallery: true, size: "tall", image: "images/vision-board/gallery/gallery-11-kubecon-india-talk.jpg", alt: "Harini Anand giving a lightning talk at KubeCon India" },
   { gallery: true, size: "tall", image: "images/vision-board/gallery/gallery-12-kubecon-eu-talk.jpg", alt: "Harini Anand speaking at Cloud Native AI KubeFlow Day Europe" },
@@ -84,7 +82,11 @@ const BOARD_TILES = [
   { gallery: true, image: "images/vision-board/gallery/gallery-20-ml-systems-workshop.jpg", alt: "Harini Anand presenting at an ML systems workshop" },
   { gallery: true, image: "images/vision-board/gallery/gallery-21-pesu-roots-top10.jpg", alt: "PESU Project Roots top 10 recognition poster" },
   { gallery: true, image: "images/vision-board/gallery/gallery-22-women-who-go-poster.jpg", alt: "Women Who Go Bangalore talk poster featuring Harini Anand" },
-  { gallery: true, image: "images/vision-board/gallery/gallery-23-mcp-dev-summit.jpg", alt: "Harini Anand presenting at MCP Dev Summit Bengaluru" }
+  { gallery: true, image: "images/vision-board/gallery/gallery-23-mcp-dev-summit.jpg", alt: "Harini Anand presenting at MCP Dev Summit Bengaluru" },
+  { gallery: true, size: "wide", image: "images/vision-board/gallery/gallery-24-lakehouse-meetup.jpg", alt: "Audience at Bangalore Data Lakehouse Meetup" },
+  { gallery: true, size: "tall", image: "images/vision-board/gallery/gallery-25-mcp-mumbai-stage.jpg", alt: "Harini Anand speaking at MCP Dev Summit Mumbai" },
+  { gallery: true, size: "wide", image: "images/vision-board/gallery/gallery-26-io-connect-india.jpg", alt: "Harini Anand at Google I/O Connect India" },
+  { gallery: true, size: "tall", image: "images/vision-board/gallery/gallery-27-mcp-dev-summit-mumbai.jpg", alt: "Harini Anand at MCP Dev Summit Mumbai" }
 ];
 
 /* ---------- EXPERIENCE TIMELINE ---------- */
@@ -110,10 +112,6 @@ const EXPERIENCES = [
       "Built cloud-native infrastructure and developer tooling for IBM watsonx.data across Kubernetes, Go, ArgoCD/GitOps, OpenSearch, FedRAMP compliance, and AI infrastructure operations.",
       "Leading pan lab agentic govtech initiatives at IBM, connecting sovereign AI, policy-aware infrastructure, and practical internal tooling for regulated environments.",
       "Architected and delivered wxdctl, a production-grade Golang CLI for Kubernetes resource operations across ROKS and Azure clusters, reducing developer friction for Business Unit cloud operations.",
-      "Drove infrastructure cost optimization by reducing File and Block Storage expenditure by 90% ($820 to $70/month) through forensic Persistent Volume analysis, owner validation, and safe formation cleanup.",
-      "Led infrastructure-as-code cleanup for the Cloud VPC initiative, introducing hierarchical value resolution and eliminating 60-70% redundant configuration while maintaining backward compatibility across ArgoCD health checks.",
-      "Contributed to security-critical initiatives: FedRAMP baseline CVE remediation, DAST/UI scans for OpenSearch tech preview, hardened packaging for HSCP components.",
-      "Resolved 100+ cross-team infrastructure blockers across IBM watsonx.data infrastructure and developer workflows.",
       "Selected to lead the Speaking & Authoring Working Group under the ISL-wide Core-X initiative.",
       "Contributor to the IBM Agentic AI patent project."
     ],
@@ -174,7 +172,7 @@ const EXPERIENCES = [
     location: "Remote",
     bullets: [
       "Leading creative direction across Illuminate AI's content properties.",
-      "Continuing collaboration on Breakdown the BMC: AI Innovator's Playbook."
+      "Shaping founder-led AI storytelling, brand voice, and editorial strategy for accessible technical education across a 1M+ AI community."
     ],
     tags: ["Content Strategy", "Creative Direction"]
   },
@@ -207,7 +205,7 @@ const EXPERIENCES = [
     org: "Niramai Health Analytix",
     location: "Bengaluru",
     bullets: [
-      "Building novel mammography AI architectures."
+      "Worked on mammography AI research for breast cancer screening, with focus on model architecture exploration and clinically grounded evaluation."
     ],
     tags: ["Clinical AI", "Mammography", "Deep Learning"]
   },
@@ -382,7 +380,7 @@ const PROJECTS = [
   {
     cat: "AI Infrastructure · IBM",
     name: "Unified AI Product Discovery",
-    desc: "Multi-agent system synthesizing cross-portfolio intelligence across IBM software offerings. Won Most Innovative Solution at the Product Synergy Week Hackathon 2026. First IBM award presented by GM Sriram Raghavan.",
+    desc: "Multi-agent system synthesizing cross-portfolio intelligence across IBM software offerings. Won Most Innovative Solution at the India lab-wide Product Synergy Week Hackathon 2026. First IBM award presented by GM Sriram Raghavan.",
     tags: ["Multi-agent", "Cross-portfolio", "Agentic AI"]
   },
   {
@@ -497,7 +495,7 @@ const COMMUNITY = [
   { role: "Reviewer", org: "ICLR 2026 · MemAgents Workshop", date: "2026", desc: "Reviewed workshop submissions on memory-augmented agents, LLM systems, and agentic AI architectures." },
   { role: "Reviewer", org: "GopherCon US 2026", date: "2026", desc: "Reviewed technical proposals in Go, cloud-native systems, and developer tooling." },
   { role: "Reviewer", org: "PEARC 2026 · Posters & Visualizations Track", date: "2026", desc: "Reviewed submissions in advanced research computing and scientific computing practice." },
-  { role: "Editor & Writer", org: "kubernetes-sigs/lwkd", date: "2026 to Present", desc: "Advanced from contributor/writer to editor within 2 months. Curate, edit, and summarize upstream Kubernetes development activity for a global open-source audience. Merged PRs #802, #798, #795." },
+  { role: "Editor & Writer", org: "kubernetes-sigs/lwkd", date: "2026 to Present", desc: "Advanced from contributor/writer to editor within 2 months. Curate, edit, and summarize upstream Kubernetes development activity for a global open-source audience. <a href=\"https://github.com/kubernetes-sigs/lwkd\" target=\"_blank\" rel=\"noopener\">kubernetes-sigs/lwkd</a>." },
   { role: "Working Group Lead", org: "IBM Core-X · Speaking & Authoring", date: "2025 to Present", desc: "Leading the Speaking & Authoring Working Group across IBM India Software Labs under Gireesh Punathil's sponsorship." },
   { role: "APAC Ambassador", org: "Stanford Women in Data Science (WiDS) Worldwide", date: "Nov 2021 to Present", desc: "WiDS Bengaluru Ambassador; recognized as a High Impact Ambassador in Asia-Pacific; among the youngest WiDS Ambassadors in APAC." },
   { role: "Head", org: "Hackerspace (HSP), PES University", date: "2023 to 2025", desc: "Led the largest technical/FOSS community on campus. Started Project Expo (now Project Expo 2.0, 419 registrations). Organized workshops, hackathons, peer-learning programs." },
@@ -510,7 +508,8 @@ const COMMUNITY = [
 /* ---------- MENTORING & TEACHING (1:1, coursework, outreach) ---------- */
 const MENTORING = [
   { role: "Mentor", org: "Women in High Performance Computing (WHPC)", date: "Jan 2026 to Present", desc: "Mentor early-career and aspiring professionals in the HPC ecosystem through structured guidance on technical development, research direction, confidence-building, and career navigation." },
-  { role: "Fellow / Mentor", org: "Sitara Akka", date: "2025 to Present", desc: "Part of a volunteer mentoring collective that has supported 300 students over 8 months through academic, career, and personal-development guidance, mentoring students from rural Karnataka and mentees globally across countries including Turkey, the UK, Australia, and the US." },
+  { role: "Fellow / Mentor", org: "Sitara Akka", date: "2025 to Present", desc: "Part of a volunteer mentoring collective that has supported 300 students over 8 months through academic, career, and personal-development guidance for students from rural Karnataka." },
+  { role: "Independent Mentor", org: "Global 1:1 mentoring", date: "Ongoing", desc: "Mentor students and early-career builders globally across countries including Turkey, the UK, Australia, and the US through project reviews, career guidance, and technical direction." },
   { role: "Founder / Writer", org: "swiftieintech", date: "2024 to Present", desc: "Write technical and career-focused AI content for a global reader community of 2,000+ subscribers. Translates emerging AI, cloud-native, and research ideas into accessible learning resources." },
   { role: "Teaching Assistant", org: "Generative AI & Its Applications, PES University", date: "Dec 2024 to Jun 2025", desc: "Supported course delivery, student mentoring, and hands-on learning around generative AI systems, applied AI tools, and responsible AI workflows." },
   { role: "Teaching Assistant", org: "Linear Algebra, PES University", date: "Prior semester", desc: "Supported undergraduate instruction, student doubt-clearing, and mathematical foundations for machine learning, data science, and AI coursework." },
@@ -524,7 +523,7 @@ const MENTORING = [
 const ACHIEVEMENTS = [
   { cat: "IBM",          title: "Double-band Promotion at IBM", desc: "Recognized for exceptional technical ownership, business impact, and cross-functional leadership in cloud-native infrastructure." },
   { cat: "IBM",          title: "Top 50 Ideas · IBM Sovereign Core Catalog-athon", desc: "Our team's two ideas reached the Top 50 in a cross-lab initiative spanning seven cities: a Policy-as-Code Governance Engine for Sovereign Kubernetes using Kyverno/OPA-style enforcement, and a Sovereign Document Intelligence Hub using Paperless-ngx, Apache Tika, PostgreSQL, MinIO, Redis, and OCR for searchable, auditable, in-boundary document workflows." },
-  { cat: "IBM",          title: "IBM ISL Hackathon · Most Innovative Solution", desc: "Product Synergy Week 2026. Special mention from VP Vishal Chahal." },
+  { cat: "IBM",          title: "IBM ISL Hackathon · Most Innovative Solution", desc: "Won the India lab-wide Product Synergy Week 2026 hackathon; received a special mention from VP Vishal Chahal." },
   { cat: "Speaking",     title: "KubeCon + CloudNativeCon EU 2026", desc: "Speaker · Cloud Native AI Day · Amsterdam." },
   { cat: "Speaking",     title: "KubeCon + CloudNativeCon India 2025", desc: "Keynote. Only intern accepted; youngest speaker. CNCF-sponsored." },
   { cat: "Speaking",     title: "MCP Developers Summit Mumbai & Bengaluru", desc: "Two keynotes on eBPF × MCP for agentic systems (Linux Foundation × Agentic AI Foundation)." },
