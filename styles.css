@@ -379,7 +379,7 @@ li {
   color: var(--ink);
   font-family: var(--display);
   font-weight: 900;
-  font-size: clamp(1.38rem, 2vw, 2.42rem);
+  font-size: clamp(1.25rem, 1.45vw, 1.9rem);
   line-height: 1;
   letter-spacing: 0;
   margin: 0;
@@ -1178,6 +1178,81 @@ li {
   display: flex; flex-wrap: wrap; gap: .5rem;
   margin-bottom: 1.5rem;
 }
+.sessionize-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem 1.5rem;
+  align-items: center;
+  margin: 0 0 1rem;
+  padding: 1rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--paper-2);
+}
+.sessionize-card__eyebrow {
+  display: block;
+  margin-bottom: .25rem;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--clay);
+}
+.sessionize-card h3 {
+  margin: 0 0 .25rem;
+  font-family: var(--display);
+  font-size: clamp(1.25rem, 1.8vw, 1.7rem);
+  line-height: 1.05;
+}
+.sessionize-card p {
+  margin: 0;
+  max-width: 68ch;
+  color: var(--ink-2);
+  font-size: 17.5px;
+  line-height: 1.42;
+  text-align: justify;
+}
+.sessionize-embed {
+  margin: 0 0 1.35rem;
+  padding: .85rem 1rem;
+  border: 1px dashed var(--rule);
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--paper-2) 72%, transparent);
+}
+.sessionize-embed__fallback {
+  margin: 0 0 .6rem;
+  font-family: var(--header);
+  font-size: 14px;
+  line-height: 1.35;
+  color: var(--ink-3);
+}
+.sessionize-embed a {
+  color: var(--ink);
+}
+.sessionize-list {
+  display: grid;
+  gap: .65rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sessionize-list li {
+  padding: .8rem 0;
+  border-top: 1px solid var(--rule);
+}
+.sessionize-list h4 {
+  margin: 0 0 .3rem;
+  font-family: var(--display);
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+.sessionize-list p {
+  margin: 0;
+  color: var(--ink-2);
+  font-size: 16.5px;
+  line-height: 1.42;
+  text-align: justify;
+}
 .chip {
   font-family: var(--header);
   font-weight: 700;
@@ -1248,6 +1323,12 @@ li {
 .talk a:hover { color: var(--clay); border-color: var(--clay); }
 
 @media (max-width: 760px) {
+  .sessionize-card {
+    grid-template-columns: 1fr;
+  }
+  .sessionize-card .btn {
+    justify-self: start;
+  }
   .talk { grid-template-columns: 1fr; gap: .25rem; }
   .talk__meta { text-align: left; }
 }

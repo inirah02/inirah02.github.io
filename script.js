@@ -8,6 +8,14 @@
 
   const REDUCE_MOTION = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  function escapeHTML(value = '') {
+    return String(value)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
   /* ---------- Decorative SVG placeholder ---------- */
   const placeholderSVG = (variant) => {
     const stroke = (['ink','clay','sage','gold'].includes(variant)) ? 'rgba(244,239,230,.8)' : 'rgba(26,26,26,.45)';
@@ -314,6 +322,32 @@
     });
   }
 
+  async function renderSessionize() {
+    const mount = $('#sessionizeSessions');
+    if (!mount) return;
+
+    try {
+      const response = await fetch('https://sessionize.com/api/speaker/json/76lqq7mmu3', { cache: 'no-store' });
+      if (!response.ok) throw new Error('Sessionize request failed');
+      const data = await response.json();
+      const sessions = Array.isArray(data.sessions) ? data.sessions : [];
+      if (!sessions.length) return;
+
+      mount.innerHTML = `
+        <ul class="sessionize-list">
+          ${sessions.map(session => `
+            <li>
+              <h4>${escapeHTML(session.title || 'Session')}</h4>
+              ${session.description ? `<p>${escapeHTML(session.description)}</p>` : ''}
+            </li>
+          `).join('')}
+        </ul>
+      `;
+    } catch (error) {
+      mount.classList.add('sessionize-sessions--unavailable');
+    }
+  }
+
   /* ---------- WRITING ---------- */
   function renderWriting() {
     const list = $('#writingList');
@@ -421,14 +455,6 @@
     const beforeAccent = full.indexOf(accent);
     let index = 0;
     let last = 0;
-
-    function escapeHTML(value) {
-      return value
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;');
-    }
 
     function render(count) {
       const before = beforeAccent >= 0 ? full.slice(0, beforeAccent) : full;
@@ -617,6 +643,7 @@
     renderProjects();
     renderTalks();
     bindTalkFilter();
+    renderSessionize();
     renderWriting();
     renderCommunity();
     renderMentoring();
