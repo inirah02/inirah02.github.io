@@ -1,6 +1,6 @@
 /* =====================================================
    content.js
-   All content is grounded in CV + LinkedIn data bank.
+   All content is grounded in public profile data and user-provided updates.
    To update: just edit the arrays below.
 
    Data model note: every content item supports an
@@ -16,6 +16,12 @@
 
 /* ---------- NEWS / LATEST ---------- */
 const NEWS = [
+  {
+    date: "Aug 2026",
+    category: "Recognition",
+    title: "Featured by official IBM channels",
+    desc: "Featured by IBM's official social channels for early-career work and internship storytelling across <a href=\"https://www.linkedin.com/posts/ibm_lifeatibm-ibmcareers-internship-activity-7490625159029088257-hpjT?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAACh4uQEBshsTICdUfKtnp7aV6o7ENTB0qk0\" target=\"_blank\" rel=\"noopener\">LinkedIn</a> and <a href=\"https://www.instagram.com/p/Dbn2EoKk3uT/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\" target=\"_blank\" rel=\"noopener\">Instagram</a>."
+  },
   {
     date: "Jul 2026",
     category: "Research",
@@ -521,6 +527,7 @@ const MENTORING = [
 
 /* ---------- ACHIEVEMENTS ---------- */
 const ACHIEVEMENTS = [
+  { cat: "IBM",          title: "Featured by official IBM channels", desc: "Featured by IBM's official Life at IBM / IBM Careers social channels for early-career work and internship storytelling. <a href=\"https://www.linkedin.com/posts/ibm_lifeatibm-ibmcareers-internship-activity-7490625159029088257-hpjT?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAACh4uQEBshsTICdUfKtnp7aV6o7ENTB0qk0\" target=\"_blank\" rel=\"noopener\">LinkedIn</a> · <a href=\"https://www.instagram.com/p/Dbn2EoKk3uT/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\" target=\"_blank\" rel=\"noopener\">Instagram</a>." },
   { cat: "IBM",          title: "Double-band Promotion at IBM", desc: "Recognized for exceptional technical ownership, business impact, and cross-functional leadership in cloud-native infrastructure." },
   { cat: "IBM",          title: "Top 50 Ideas · IBM Sovereign Core Catalog-athon", desc: "Our team's two ideas reached the Top 50 in a cross-lab initiative spanning seven cities: a Policy-as-Code Governance Engine for Sovereign Kubernetes using Kyverno/OPA-style enforcement, and a Sovereign Document Intelligence Hub using Paperless-ngx, Apache Tika, PostgreSQL, MinIO, Redis, and OCR for searchable, auditable, in-boundary document workflows." },
   { cat: "IBM",          title: "IBM ISL Hackathon · Most Innovative Solution", desc: "Won the India lab-wide Product Synergy Week 2026 hackathon; received a special mention from VP Vishal Chahal." },

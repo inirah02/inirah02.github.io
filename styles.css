@@ -1519,42 +1519,18 @@ li {
   margin: 0 0 .35rem;
 }
 .ach p { margin: 0; font-size: 19px; line-height: 1.42; color: var(--ink-2); }
+.ach p a,
+.news__body p a {
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+.ach p a:hover,
+.news__body p a:hover {
+  color: var(--clay);
+}
 :root[data-theme="dark"] .ach p { color: rgba(247,248,250,0.72); }
-
-/* =====================================================
-   CV
-   ===================================================== */
-.cv {
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: clamp(2rem, 4.5vw, 3.5rem) var(--pad);
-}
-.cv__panel {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  border: 1px solid var(--rule);
-  border-radius: var(--radius);
-  background: var(--paper-2);
-  overflow: hidden;
-}
-@media (min-width: 900px) {
-  .cv__panel { grid-template-columns: 1fr 1.4fr; }
-}
-.cv__copy { padding: 2rem; display: flex; flex-direction: column; gap: 1rem; }
-.cv__copy p { margin: 0; color: var(--ink-2); max-width: 50ch; }
-.cv__actions { display: flex; flex-wrap: wrap; gap: .5rem; }
-.cv__note { font-size: 13px; color: var(--ink-3); }
-.cv__viewer {
-  background: var(--ink-3);
-  min-height: 480px;
-  display: grid;
-}
-.cv__viewer object { width: 100%; height: 100%; min-height: 480px; }
-.cv__fallback {
-  display: grid; place-items: center; gap: 1rem;
-  padding: 2rem; color: var(--paper);
-}
 
 /* =====================================================
    CONTACT
