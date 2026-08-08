@@ -92,7 +92,8 @@ const BOARD_TILES = [
   { gallery: true, size: "wide", image: "images/vision-board/gallery/gallery-24-lakehouse-meetup.jpg", alt: "Audience at Bangalore Data Lakehouse Meetup" },
   { gallery: true, size: "tall", image: "images/vision-board/gallery/gallery-25-mcp-mumbai-stage.jpg", alt: "Harini Anand speaking at MCP Dev Summit Mumbai" },
   { gallery: true, size: "wide", image: "images/vision-board/gallery/gallery-26-io-connect-india.jpg", alt: "Harini Anand at Google I/O Connect India" },
-  { gallery: true, size: "tall", image: "images/vision-board/gallery/gallery-27-mcp-dev-summit-mumbai.jpg", alt: "Harini Anand at MCP Dev Summit Mumbai" }
+  { gallery: true, size: "tall", image: "images/vision-board/gallery/gallery-27-mcp-dev-summit-mumbai.jpg", alt: "Harini Anand at MCP Dev Summit Mumbai" },
+  { gallery: true, size: "wide", image: "images/vision-board/gallery/gallery-28-kubecon-na-2026-banner.jpg", alt: "KubeCon and CloudNativeCon North America 2026 speaker acceptance banner for Restart != Recovery: Kubernetes Meets Stateful Inference" }
 ];
 
 /* ---------- EXPERIENCE TIMELINE ---------- */
@@ -527,6 +528,7 @@ const MENTORING = [
 
 /* ---------- ACHIEVEMENTS ---------- */
 const ACHIEVEMENTS = [
+  { cat: "KubeCon",      title: "KubeCon + CloudNativeCon North America 2026 Speaker", desc: "Accepted to speak at <a href=\"https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/\" target=\"_blank\" rel=\"noopener\">KubeCon + CloudNativeCon North America 2026</a> in Salt Lake City, Utah, November 9-12, with <strong>Restart &ne; Recovery: Kubernetes Meets Stateful Inference</strong>." },
   { cat: "IBM",          title: "Featured by official IBM channels", desc: "Featured by IBM's official Life at IBM / IBM Careers social channels for early-career work and internship storytelling. <a href=\"https://www.linkedin.com/posts/ibm_lifeatibm-ibmcareers-internship-activity-7490625159029088257-hpjT?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAACh4uQEBshsTICdUfKtnp7aV6o7ENTB0qk0\" target=\"_blank\" rel=\"noopener\">LinkedIn</a> · <a href=\"https://www.instagram.com/p/Dbn2EoKk3uT/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\" target=\"_blank\" rel=\"noopener\">Instagram</a>." },
   { cat: "IBM",          title: "Double-band Promotion at IBM", desc: "Recognized for exceptional technical ownership, business impact, and cross-functional leadership in cloud-native infrastructure." },
   { cat: "IBM",          title: "Top 50 Ideas · IBM Sovereign Core Catalog-athon", desc: "Our team's two ideas reached the Top 50 in a cross-lab initiative spanning seven cities: a Policy-as-Code Governance Engine for Sovereign Kubernetes using Kyverno/OPA-style enforcement, and a Sovereign Document Intelligence Hub using Paperless-ngx, Apache Tika, PostgreSQL, MinIO, Redis, and OCR for searchable, auditable, in-boundary document workflows." },
