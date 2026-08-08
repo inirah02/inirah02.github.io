@@ -18,6 +18,12 @@
 const NEWS = [
   {
     date: "Aug 2026",
+    category: "Speaking",
+    title: "KubeCon + CloudNativeCon North America 2026 speaker acceptance",
+    desc: "Accepted to speak at <a href=\"https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/\" target=\"_blank\" rel=\"noopener\">KubeCon + CloudNativeCon North America 2026</a> in Salt Lake City, Utah, November 9-12, with <strong>Restart &ne; Recovery: Kubernetes Meets Stateful Inference</strong>."
+  },
+  {
+    date: "Aug 2026",
     category: "Recognition",
     title: "Featured by official IBM channels",
     desc: "Featured by IBM's official social channels for early-career work and internship storytelling across <a href=\"https://www.linkedin.com/posts/ibm_lifeatibm-ibmcareers-internship-activity-7490625159029088257-hpjT?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAACh4uQEBshsTICdUfKtnp7aV6o7ENTB0qk0\" target=\"_blank\" rel=\"noopener\">LinkedIn</a> and <a href=\"https://www.instagram.com/p/Dbn2EoKk3uT/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\" target=\"_blank\" rel=\"noopener\">Instagram</a>."
