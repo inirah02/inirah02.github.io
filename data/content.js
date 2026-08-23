@@ -110,11 +110,11 @@ const EXPERIENCES = [
     org: "Carnegie Mellon University",
     location: "Remote",
     bullets: [
-      "Collaborating on early-stage research in medical vision-language models, with emphasis on interpretability, reasoning, and trustworthy biomedical foundation models.",
-      "Conducting paper reading, idea collection, and literature synthesis on mechanistic interpretability for SAM and MedSAM-style medical foundation models, probing methods, domain shift, and clinically meaningful reasoning.",
-      "Exploring research directions for evaluating and improving robustness, transparency, and reasoning behavior in medical VLMs before moving toward implementation and experimental evaluation."
+      "Researching Alzheimer's disease neuroimaging, with focus on PET/MRI data, tau SUVR biomarkers, and longitudinal tau accumulation.",
+      "Work centers on cohort-scale consistency questions in PET-derived tau readouts, including reference-region sensitivity and PET-to-MRI study alignment.",
+      "Domain focus: robust biomarker interpretation for Alzheimer's disease progression using multimodal neuroimaging data."
     ],
-    tags: ["Medical VLMs", "Interpretability", "Trustworthy AI", "Biomedical AI"]
+    tags: ["Alzheimer's Neuroimaging", "PET/MRI", "Tau SUVR", "Longitudinal Biomarkers"]
   },
   {
     date: "Aug 2025 to Present",
@@ -173,10 +173,11 @@ const EXPERIENCES = [
     org: "Georgia Institute of Technology",
     location: "Remote",
     bullets: [
-      "Applying ML/AI methods to complex scientific and biological problems.",
-      "Research interests span computational cognition, clinical AI, interpretable ML, computational biology, protein structure and function, and drug discovery."
+      "Researching patient-specific precision oncology from blood metabolomics, with focus on cancer drug-response heterogeneity.",
+      "Problem space: how an individual patient's metabolomic state can inform interpretable therapeutic hypotheses beyond population-level standard-of-care decisions.",
+      "Domain focus: blood metabolomics, cancer systems biology, and personalized drug prediction."
     ],
-    tags: ["Systems Biology", "Interpretable ML", "Computational Biology"]
+    tags: ["Precision Oncology", "Blood Metabolomics", "Cancer Systems Biology"]
   },
   {
     date: "Jun 2025 to Present",
