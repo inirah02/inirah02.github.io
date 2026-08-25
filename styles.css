@@ -926,6 +926,13 @@ li {
   font-weight: 400;
   color: var(--ink);
 }
+.identity__seo {
+  max-width: 72ch;
+  margin: .6rem auto 0;
+  color: var(--ink-2);
+  font-size: 1.02rem;
+  line-height: 1.45;
+}
 .identity__list li::before {
   content: '·  ';
   color: var(--clay);
