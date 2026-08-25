@@ -18,6 +18,12 @@
 const NEWS = [
   {
     date: "Aug 2026",
+    category: "Recognition",
+    title: "ACM professional membership awarded",
+    desc: "Offered complimentary professional membership by the Association for Computing Machinery in recognition of ACM author contributions across SIGSOFT ISSTA, Interactive Health, and ACM-W womENcourage."
+  },
+  {
+    date: "Aug 2026",
     category: "Speaking",
     title: "KubeCon + CloudNativeCon North America 2026 speaker acceptance",
     desc: "Accepted to speak at <a href=\"https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/\" target=\"_blank\" rel=\"noopener\">KubeCon + CloudNativeCon North America 2026</a> in Salt Lake City, Utah, November 9-12, with <strong>Restart &ne; Recovery: Kubernetes Meets Stateful Inference</strong>."
@@ -452,7 +458,7 @@ const TALKS = [
   // Keynotes
   { cat: "conference", date: "Jun 2026", title: "Agentless Agents: Replacing Sidecar Observability With eBPF + MCP Tool Chains", event: "Keynote · MCP Developers Summit Mumbai · Linux Foundation & Agentic AI Foundation", location: "Nita Mukesh Ambani Cultural Centre, Jio World Centre", desc: "Technical keynote on eBPF telemetry, MCP tool interfaces, kernel-aware debugging, sidecar-free observability, and production failure modes in agentic systems.", link: "" },
   { cat: "conference", date: "Jun 2026", title: "Auditing MCP Tool Calls at the Kernel Level: eBPF as a Trust Boundary Enforcer", event: "Keynote · MCP Developers Summit Bengaluru · Linux Foundation & Agentic AI Foundation", location: "Bengaluru", desc: "Keynote on mapping MCP request IDs to process lineage, syscall auditing, LSM hooks, and runtime enforcement for trustworthy agent systems.", link: "" },
-  { cat: "conference", date: "Jun 2026", title: "Talk to Your Lakehouse: Building a Model Context Protocol Server for Apache Iceberg", event: "Bangalore Data Lakehouse Meetup · Cloudera × e6data × OLake by Datazip", location: "Cloudera, Bengaluru", desc: "MCP tool design for Iceberg REST Catalogs, live schema discovery, metadata trimming, auth boundaries, and safe agentic data access.", link: "" },
+  { cat: "conference", date: "Jun 2026", title: "Talk to Your Lakehouse: Building a Model Context Protocol Server for Apache Iceberg", event: "Bangalore Data Lakehouse Meetup · Cloudera × e6data × OLake by Datazip", location: "Cloudera, Bengaluru", desc: "MCP tool design for Iceberg REST Catalogs, live schema discovery, metadata trimming, auth boundaries, and safe agentic data access.", link: "https://youtu.be/zWoaT93pGjU?si=pc9E6Y1N7hbVh16I&t=5883" },
   { cat: "conference", date: "Mar 2026", title: "AI Meets Kubernetes: Langflow & Groq in Automated Incident Management", event: "KubeCon + CloudNativeCon EU · Cloud Native AI Day", location: "Amsterdam · 13,500+ attendees", desc: "First international solo conference talk. CNCF travel sponsored.", link: "" },
   { cat: "conference", date: "Aug 2025", title: "Kubernetes Developer Tooling at watsonx.data", event: "Keynote · KubeCon + CloudNativeCon India 2025", location: "Hyderabad · 4,000+ attendees", desc: "Youngest speaker and only intern speaker from the team. Presented Kubernetes developer tooling and testing practices. CNCF travel & stay sponsored.", link: "https://sched.co/23Et4" },
   { cat: "conference", date: "Sep 2025", title: "Under the Hood: The Craftsmanship of Creating High-Performance CLIs in Golang", event: "IndiaFOSS 2025 · DEVROOM #2 (Compilers, PL, Systems)", location: "Bengaluru", desc: "Cobra architecture, Unix philosophy for CLI design, NLP for command discovery.", link: "" },
@@ -535,6 +541,7 @@ const MENTORING = [
 
 /* ---------- ACHIEVEMENTS ---------- */
 const ACHIEVEMENTS = [
+  { cat: "ACM",          title: "ACM Professional Membership", desc: "Offered complimentary professional membership by the Association for Computing Machinery in recognition of ACM author contributions across SIGSOFT ISSTA, Interactive Health, and ACM-W womENcourage." },
   { cat: "KubeCon",      title: "KubeCon + CloudNativeCon North America 2026 Speaker", desc: "Accepted to speak at <a href=\"https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/\" target=\"_blank\" rel=\"noopener\">KubeCon + CloudNativeCon North America 2026</a> in Salt Lake City, Utah, November 9-12, with <strong>Restart &ne; Recovery: Kubernetes Meets Stateful Inference</strong>." },
   { cat: "IBM",          title: "Featured by official IBM channels", desc: "Featured by IBM's official Life at IBM / IBM Careers social channels for early-career work and internship storytelling. <a href=\"https://www.linkedin.com/posts/ibm_lifeatibm-ibmcareers-internship-activity-7490625159029088257-hpjT?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAACh4uQEBshsTICdUfKtnp7aV6o7ENTB0qk0\" target=\"_blank\" rel=\"noopener\">LinkedIn</a> · <a href=\"https://www.instagram.com/p/Dbn2EoKk3uT/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\" target=\"_blank\" rel=\"noopener\">Instagram</a>." },
   { cat: "IBM",          title: "Double-band Promotion at IBM", desc: "Recognized for exceptional technical ownership, business impact, and cross-functional leadership in cloud-native infrastructure." },
