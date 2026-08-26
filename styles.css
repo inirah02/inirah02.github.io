@@ -926,13 +926,6 @@ li {
   font-weight: 400;
   color: var(--ink);
 }
-.identity__seo {
-  max-width: 72ch;
-  margin: .6rem auto 0;
-  color: var(--ink-2);
-  font-size: 1.02rem;
-  line-height: 1.45;
-}
 .identity__list li::before {
   content: '·  ';
   color: var(--clay);
@@ -1625,6 +1618,13 @@ li {
   margin: 0;
 }
 .foot__sub { margin: .25rem 0 0; font-size: 13px; color: var(--ink-3); }
+.foot__identity {
+  max-width: 76ch;
+  margin: .45rem 0 0;
+  color: var(--ink-3);
+  font-size: 12.5px;
+  line-height: 1.45;
+}
 .foot__links a {
   text-decoration: none;
   font-size: 14px;
