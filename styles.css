@@ -1502,6 +1502,9 @@ li {
   background: rgba(247,248,250,0.035);
 }
 :root[data-theme="dark"] .ach:hover { background: rgba(247,248,250,0.07); border-color: var(--clay-soft); }
+:root[data-theme="dark"] .ach h3 {
+  color: var(--paper);
+}
 .ach__cat {
   font-family: var(--mono);
   font-size: 10.5px;
@@ -1531,6 +1534,15 @@ li {
   color: var(--clay);
 }
 :root[data-theme="dark"] .ach p { color: rgba(247,248,250,0.72); }
+:root[data-theme="dark"] .ach p strong {
+  color: var(--paper);
+}
+:root[data-theme="dark"] .ach p a {
+  color: var(--clay-soft);
+}
+:root[data-theme="dark"] .ach p a:hover {
+  color: var(--paper);
+}
 .ach__embed {
   max-width: var(--max);
   margin: clamp(1.25rem, 3vw, 2rem) auto 0;
