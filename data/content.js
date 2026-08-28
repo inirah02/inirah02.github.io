@@ -18,6 +18,12 @@
 const NEWS = [
   {
     date: "Aug 2026",
+    category: "Service",
+    title: "Nominated reviewer for Med-Reasoner 2026 at NeurIPS",
+    desc: "Nominated by the program chair committee to serve as a reviewer for Med-Reasoner 2026, a NeurIPS workshop focused on medical reasoning and AI research."
+  },
+  {
+    date: "Aug 2026",
     category: "Recognition",
     title: "ACM professional membership awarded",
     desc: "Offered complimentary professional membership by the Association for Computing Machinery in recognition of ACM author contributions across SIGSOFT ISSTA, Interactive Health, and ACM-W womENcourage."
@@ -511,6 +517,7 @@ const WRITING = [
 
 /* ---------- COMMUNITY (orgs, editorial, open source, service) ---------- */
 const COMMUNITY = [
+  { role: "Nominated Reviewer", org: "Med-Reasoner 2026 · NeurIPS Workshop", date: "2026", desc: "Nominated by the program chair committee to review work at the intersection of medical reasoning and AI research." },
   { role: "Program Committee Member", org: "AAAI/ACM AIES 2026", date: "2026", desc: "Reviewed interdisciplinary submissions at the intersection of AI systems, ethics, governance, privacy, hallucination, and societal impact." },
   { role: "Reviewer", org: "ICLR 2026 · MemAgents Workshop", date: "2026", desc: "Reviewed workshop submissions on memory-augmented agents, LLM systems, and agentic AI architectures." },
   { role: "Reviewer", org: "GopherCon US 2026", date: "2026", desc: "Reviewed technical proposals in Go, cloud-native systems, and developer tooling." },
@@ -541,6 +548,7 @@ const MENTORING = [
 
 /* ---------- ACHIEVEMENTS ---------- */
 const ACHIEVEMENTS = [
+  { cat: "Service",      title: "Med-Reasoner 2026 · NeurIPS Reviewer Nomination", desc: "Nominated by the program chair committee to serve as a reviewer for Med-Reasoner 2026, a NeurIPS workshop on medical reasoning and AI research." },
   { cat: "ACM",          title: "ACM Professional Membership", desc: "Offered complimentary professional membership by the Association for Computing Machinery in recognition of ACM author contributions across SIGSOFT ISSTA, Interactive Health, and ACM-W womENcourage." },
   { cat: "KubeCon",      title: "KubeCon + CloudNativeCon North America 2026 Speaker", desc: "Accepted to speak at <a href=\"https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/\" target=\"_blank\" rel=\"noopener\">KubeCon + CloudNativeCon North America 2026</a> in Salt Lake City, Utah, November 9-12, with <strong>Restart &ne; Recovery: Kubernetes Meets Stateful Inference</strong>." },
   { cat: "IBM",          title: "Featured by official IBM channels", desc: "Featured by IBM's official Life at IBM / IBM Careers social channels for early-career work and internship storytelling. <a href=\"https://www.linkedin.com/posts/ibm_lifeatibm-ibmcareers-internship-activity-7490625159029088257-hpjT?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAACh4uQEBshsTICdUfKtnp7aV6o7ENTB0qk0\" target=\"_blank\" rel=\"noopener\">LinkedIn</a> · <a href=\"https://www.instagram.com/p/Dbn2EoKk3uT/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\" target=\"_blank\" rel=\"noopener\">Instagram</a>." },
