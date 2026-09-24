@@ -17,6 +17,12 @@
 /* ---------- NEWS / LATEST ---------- */
 const NEWS = [
   {
+    date: "Sep 2026",
+    category: "Speaking",
+    title: "Two IndiaFOSS 2026 talks accepted",
+    desc: "Accepted to present two IndiaFOSS 2026 lightning talks: <a href=\"https://fossunited.org/c/indiafoss/2026/cfp/76r6ku6p9h\" target=\"_blank\" rel=\"noopener\">Changelogs Are Not Enough: Writing Community Memory for Kubernetes</a> and <a href=\"https://fossunited.org/c/indiafoss/2026/cfp/f4pdfg9qvh\" target=\"_blank\" rel=\"noopener\">Unused Is Not a Kubernetes Field: Platform Hygiene Is Not Cleanup</a>."
+  },
+  {
     date: "Aug 2026",
     category: "Service",
     title: "Nominated reviewer for Med-Reasoner 2026 at NeurIPS",
@@ -462,6 +468,8 @@ const PROJECTS = [
 /* ---------- TALKS ---------- */
 const TALKS = [
   // Keynotes
+  { cat: "conference", date: "2026", title: "Changelogs Are Not Enough: Writing Community Memory for Kubernetes", event: "IndiaFOSS 2026 · Documentation & Technical Writing", location: "IndiaFOSS · FOSS United", desc: "Approved lightning talk on Last Week in Kubernetes Development, editorial judgment in fast-moving FOSS projects, and technical writing as an open-source contribution path.", link: "https://fossunited.org/c/indiafoss/2026/cfp/76r6ku6p9h" },
+  { cat: "conference", date: "2026", title: "Unused Is Not a Kubernetes Field: Platform Hygiene Is Not Cleanup", event: "IndiaFOSS 2026 · Cloud & DevOps", location: "IndiaFOSS · FOSS United", desc: "Approved lightning talk on safer cloud-native hygiene workflows: Capture, Detect, Classify, Prove, Act, with Kubernetes, GitOps, policy-as-code, observability, and rollback-aware cleanup patterns.", link: "https://fossunited.org/c/indiafoss/2026/cfp/f4pdfg9qvh" },
   { cat: "conference", date: "Jun 2026", title: "Agentless Agents: Replacing Sidecar Observability With eBPF + MCP Tool Chains", event: "Keynote · MCP Developers Summit Mumbai · Linux Foundation & Agentic AI Foundation", location: "Nita Mukesh Ambani Cultural Centre, Jio World Centre", desc: "Technical keynote on eBPF telemetry, MCP tool interfaces, kernel-aware debugging, sidecar-free observability, and production failure modes in agentic systems.", link: "" },
   { cat: "conference", date: "Jun 2026", title: "Auditing MCP Tool Calls at the Kernel Level: eBPF as a Trust Boundary Enforcer", event: "Keynote · MCP Developers Summit Bengaluru · Linux Foundation & Agentic AI Foundation", location: "Bengaluru", desc: "Keynote on mapping MCP request IDs to process lineage, syscall auditing, LSM hooks, and runtime enforcement for trustworthy agent systems.", link: "" },
   { cat: "conference", date: "Jun 2026", title: "Talk to Your Lakehouse: Building a Model Context Protocol Server for Apache Iceberg", event: "Bangalore Data Lakehouse Meetup · Cloudera × e6data × OLake by Datazip", location: "Cloudera, Bengaluru", desc: "MCP tool design for Iceberg REST Catalogs, live schema discovery, metadata trimming, auth boundaries, and safe agentic data access.", link: "https://youtu.be/zWoaT93pGjU?si=pc9E6Y1N7hbVh16I&t=5883" },
@@ -548,6 +556,7 @@ const MENTORING = [
 
 /* ---------- ACHIEVEMENTS ---------- */
 const ACHIEVEMENTS = [
+  { cat: "Speaking",     title: "IndiaFOSS 2026 · Two Talk Acceptances", desc: "Two approved IndiaFOSS 2026 lightning talks: <a href=\"https://fossunited.org/c/indiafoss/2026/cfp/76r6ku6p9h\" target=\"_blank\" rel=\"noopener\">Changelogs Are Not Enough: Writing Community Memory for Kubernetes</a> and <a href=\"https://fossunited.org/c/indiafoss/2026/cfp/f4pdfg9qvh\" target=\"_blank\" rel=\"noopener\">Unused Is Not a Kubernetes Field: Platform Hygiene Is Not Cleanup</a>." },
   { cat: "Service",      title: "Med-Reasoner 2026 · NeurIPS Reviewer Nomination", desc: "Nominated by the program chair committee to serve as a reviewer for Med-Reasoner 2026, a NeurIPS workshop on medical reasoning and AI research." },
   { cat: "ACM",          title: "ACM Professional Membership", desc: "Offered complimentary professional membership by the Association for Computing Machinery in recognition of ACM author contributions across SIGSOFT ISSTA, Interactive Health, and ACM-W womENcourage." },
   { cat: "KubeCon",      title: "KubeCon + CloudNativeCon North America 2026 Speaker", desc: "Accepted to speak at <a href=\"https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/\" target=\"_blank\" rel=\"noopener\">KubeCon + CloudNativeCon North America 2026</a> in Salt Lake City, Utah, November 9-12, with <strong>Restart &ne; Recovery: Kubernetes Meets Stateful Inference</strong>." },
