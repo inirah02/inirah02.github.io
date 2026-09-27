@@ -301,7 +301,10 @@
           <h3>${t.title}</h3>
           <p class="talk__event">${t.event}</p>
           <p class="talk__desc">${t.desc || ''}</p>
-          ${t.link ? `<a href="${t.link}" target="_blank" rel="noopener">View →</a>` : ''}
+          ${(t.link || t.secondaryLink) ? `<div class="talk__links">
+            ${t.link ? `<a href="${t.link}" target="_blank" rel="noopener">${t.linkLabel || 'View'} →</a>` : ''}
+            ${t.secondaryLink ? `<a href="${t.secondaryLink}" target="_blank" rel="noopener">${t.secondaryLinkLabel || 'More details'} →</a>` : ''}
+          </div>` : ''}
         </div>
         <span class="talk__meta">${t.location || ''}</span>
       </li>

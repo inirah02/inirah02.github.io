@@ -1321,6 +1321,11 @@ li {
   display: inline-block;
 }
 .talk a:hover { color: var(--clay); border-color: var(--clay); }
+.talk__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem 1rem;
+}
 
 @media (max-width: 760px) {
   .sessionize-card {
