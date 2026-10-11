@@ -222,7 +222,7 @@
           <span class="news__cat">${n.category}</span>
           <h3>${n.title}</h3>
           <p>${n.desc}</p>
-          ${n.link ? `<a class="link-arrow news__link" href="${n.link}" target="_blank" rel="noopener">Open source →</a>` : ''}
+          ${n.link ? `<a class="link-arrow news__link" href="${n.link}" target="_blank" rel="noopener">${n.linkLabel || 'Open source'} →</a>` : ''}
         </div>
       </li>
     `).join('');
@@ -266,6 +266,7 @@
         ${p.authors ? `<p class="paper__authors">${p.authors}</p>` : ''}
         <p>${p.summary}</p>
         ${p.status ? `<span class="paper__status">${p.status}</span>` : ''}
+        ${p.link ? `<a class="link-arrow paper__link" href="${p.link}" target="_blank" rel="noopener">Read paper →</a>` : ''}
       </article>
     `).join('');
   }

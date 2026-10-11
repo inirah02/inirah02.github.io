@@ -56,7 +56,9 @@ const NEWS = [
     date: "Jun 2026",
     category: "Publication",
     title: "ISSTA 2026 paper accepted: “The Discreet Charm of the Bugeoisie”",
-    desc: "Accepted at the 35th ACM SIGSOFT International Symposium on Software Testing and Analysis. Studies reproducibility and evidentiary rigor in bug-reporting claims across ISSTA 2025 papers. Acceptance rate: 23.6%."
+    desc: "Accepted at the 35th ACM SIGSOFT International Symposium on Software Testing and Analysis. Studies reproducibility and evidentiary rigor in bug-reporting claims across ISSTA 2025 papers. Acceptance rate: 23.6%.",
+    link: "https://dl.acm.org/doi/10.1145/3832244",
+    linkLabel: "Read paper"
   },
   {
     date: "Jun 2026",
@@ -319,7 +321,7 @@ const RESEARCH = [
     summary: "Full paper accepted at the 35th ACM SIGSOFT International Symposium on Software Testing and Analysis. Studies reproducibility and evidentiary rigor in bug-reporting claims across ISSTA 2025 papers. Analyzed reported bugs, artifacts, and open-source issue traceability. Acceptance rate: 23.6%.",
     status: "Accepted · Full Paper",
     location: "ISSTA 2026",
-    link: ""
+    link: "https://dl.acm.org/doi/10.1145/3832244"
   },
   {
     venue: "ABCT 60th Annual Convention 2026",
@@ -579,7 +581,7 @@ const ACHIEVEMENTS = [
   { cat: "Scholarship",  title: "RISE MICCAI Summer School 2025", desc: "Diffusion models, graph learning, uncertainty quantification for medical image computing." },
   { cat: "Research",     title: "UIUC+ Summer Undergraduate Research", desc: "Top 15 of 1,300+ applicants. Software engineering research at UIUC." },
   { cat: "Research",     title: "ACM India Summer School (IIT Hyderabad)", desc: "1 of 40 students nationwide. Algorithmic Techniques in Computational Biology." },
-  { cat: "Research",     title: "ISSTA 2026 Paper Acceptance", desc: "The Discreet Charm of the Bugeoisie. 23.6% acceptance rate." },
+  { cat: "Research",     title: "ISSTA 2026 Paper Acceptance", desc: "<a href=\"https://dl.acm.org/doi/10.1145/3832244\" target=\"_blank\" rel=\"noopener\">The Discreet Charm of the Bugeoisie</a>. 23.6% acceptance rate." },
   { cat: "Research",     title: "ICAART 2025 Paper Acceptance", desc: "First international student-researcher conference paper. Music × stress × XAI." },
   { cat: "Recognition",  title: "Cisco ThingQbator Cohort 5 Winner", desc: "5L INR seed grant for Project ROOTS." },
   { cat: "Mentorship",   title: "Google KaggleX BIPOC Mentee", desc: "$1,000 educational grant; 4-month global mentorship cohort." },

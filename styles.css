@@ -1121,6 +1121,10 @@ li {
   background: var(--clay);
   color: var(--paper);
 }
+.paper__link {
+  align-self: flex-start;
+  margin-top: .15rem;
+}
 
 /* =====================================================
    PROJECTS
