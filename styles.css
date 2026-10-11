@@ -1480,10 +1480,10 @@ li {
 }
 .achievements .section-num { color: var(--clay); }
 :root[data-theme="dark"] .achievements {
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--paper-2);
+  color: var(--ink);
 }
-:root[data-theme="dark"] .achievements .section-head h2 { color: var(--paper); }
+:root[data-theme="dark"] .achievements .section-head h2 { color: var(--ink); }
 :root[data-theme="dark"] .achievements .section-num { color: var(--clay-soft); }
 .ach__grid {
   max-width: var(--max);
@@ -1503,12 +1503,12 @@ li {
 }
 .ach:hover { background: var(--paper-3); border-color: var(--clay); transform: translateY(-2px); }
 :root[data-theme="dark"] .ach {
-  border-color: rgba(247,248,250,0.18);
-  background: rgba(247,248,250,0.035);
+  border-color: var(--rule);
+  background: var(--paper);
 }
-:root[data-theme="dark"] .ach:hover { background: rgba(247,248,250,0.07); border-color: var(--clay-soft); }
+:root[data-theme="dark"] .ach:hover { background: var(--paper-3); border-color: var(--clay-soft); }
 :root[data-theme="dark"] .ach h3 {
-  color: var(--paper);
+  color: var(--ink);
 }
 .ach__cat {
   font-family: var(--mono);
@@ -1538,15 +1538,15 @@ li {
 .news__body p a:hover {
   color: var(--clay);
 }
-:root[data-theme="dark"] .ach p { color: rgba(247,248,250,0.72); }
+:root[data-theme="dark"] .ach p { color: var(--ink-2); }
 :root[data-theme="dark"] .ach p strong {
-  color: var(--paper);
+  color: var(--ink);
 }
 :root[data-theme="dark"] .ach p a {
   color: var(--clay-soft);
 }
 :root[data-theme="dark"] .ach p a:hover {
-  color: var(--paper);
+  color: var(--ink);
 }
 .ach__embed {
   max-width: var(--max);
