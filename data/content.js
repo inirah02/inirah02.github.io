@@ -17,6 +17,22 @@
 /* ---------- NEWS / LATEST ---------- */
 const NEWS = [
   {
+    date: "Oct 2026",
+    category: "Publication",
+    title: "Paper published in the ACM Digital Library",
+    desc: "<em>The Discreet Charm of the Bugeoisie: A First Look at Bug Reports Created by Researchers</em> is now published in <em>Proceedings of the ACM on Software Engineering, Volume 3, ISSTA</em>.",
+    link: "https://dl.acm.org/doi/10.1145/3832244",
+    linkLabel: "Read the paper"
+  },
+  {
+    date: "Oct 2026",
+    category: "Mentoring",
+    title: "Started Cohort 2 with Sitara Akka",
+    desc: "Began mentoring a second cohort of Grade 10 and 12 students across Karnataka, supporting confidence, self-awareness, and ownership of their learning and future choices.",
+    link: "https://www.sitaraakka.org/",
+    linkLabel: "Visit Sitara Akka"
+  },
+  {
     date: "Sep 2026",
     category: "Speaking",
     title: "Two IndiaFOSS 2026 talks accepted",
